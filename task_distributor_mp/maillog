@@ -1,0 +1,592 @@
+May 31 10:24:13 mailadmin-2-216 tcpserver[31676]: [INFO] client_online child pid:29624 ip:127.0.0.1 connect:1/2000
+May 31 10:24:13 mailadmin-2-216 tcpserver[29624]: [INFO] child_init ICID:6476AFCD000073B8 connect Time:1685499853.951175
+May 31 10:24:13 mailadmin-2-216 tcpserver[29624]: [INFO] is_ip_in_super_blacklist ICID:6476AFCD000073B8 super_black_ip(/var/qmail/control/super_black_ip) is exists and is readable
+May 31 10:24:17 mailadmin-2-216 tcpserver[29624]: [INFO] ipgroup_find ICID:6476AFCD000073B8 group:ALL, policy:SMTPAUTH
+May 31 10:24:17 mailadmin-2-216 qmail-smtpd[29624]: [INFO] limit_host_check ICID:6476AFCD000073B8 cache no found limit ip:127.0.0.1 mckey:I_7f000001
+May 31 10:24:17 mailadmin-2-216 qmail-smtpd[29624]: [INFO] main ICID:6476AFCD000073B8 [SESSION BEGIN] client:(127.0.0.1) Time:1685499857.177034 IPGroup:ALL domain:localhost
+May 31 10:24:18 mailadmin-2-216 qmail-smtpd[29624]: [INFO] smtp_quit ICID:6476AFCD000073B8 [quit]:
+May 31 10:24:18 mailadmin-2-216 qmail-smtpd[29624]: [INFO] smtp_quit ICID:6476AFCD000073B8 [SESSION END] client:(127.0.0.1).
+May 31 10:24:18 mailadmin-2-216 tcpserver[31676]: [INFO] client_offline child exit pid:29624 ip:127.0.0.1 connect:0/2000
+May 31 10:27:00 mailadmin-2-216 tcpserver[31676]: [INFO] client_online child pid:29982 ip:10.235.172.15 connect:1/2000
+May 31 10:27:00 mailadmin-2-216 tcpserver[29982]: [INFO] child_init ICID:6476B0740000751E connect Time:1685500020.345862
+May 31 10:27:00 mailadmin-2-216 tcpserver[29982]: [INFO] is_ip_in_super_blacklist ICID:6476B0740000751E super_black_ip(/var/qmail/control/super_black_ip) is exists and is readable
+May 31 10:27:00 mailadmin-2-216 tcpserver[29982]: [INFO] ipgroup_find ICID:6476B0740000751E group:RELAYLIST, policy:SMTPAUTH
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] limit_host_check ICID:6476B0740000751E cache no found limit ip:10.235.172.15 mckey:I_aebac0f
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] main ICID:6476B0740000751E [SESSION BEGIN] client:(10.235.172.15) Time:1685500020.362877 IPGroup:RELAYLIST domain:unknown
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_ehlo ICID:6476B0740000751E [ehlo]:GraysondeMacBook-Pro.local
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] dohelo ICID:6476B0740000751E helohost:GraysondeMacBook-Pro.local
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_auth ICID:6476B0740000751E [auth]:LOGIN
+May 31 10:27:00 mailadmin-2-216 libsinamail.ldap[29982]: [info] invoke checksso [smAuthBySSO():353]
+May 31 10:27:00 mailadmin-2-216 libsinamail.ldap[29982]: [info] auth cache set, ip:10.235.172.15, email:kyosold@sina.cn [smAuthBySSO_EX():409]
+May 31 10:27:00 mailadmin-2-216 libsinamail.ldap[29982]: [info] auth by sso, ip:10.235.172.15, email:kyosold@sina.cn, ret:0 [smAuthInfo_V1():386]
+May 31 10:27:00 mailadmin-2-216 libsinamail.ldap[29982]: [info] Auth successful, ip:10.235.172.15, email:kyosold@sina.cn, actual email:kyosold@sina.cn [smAuthInfo_V1():412]
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_check_auth_login ICID:6476B0740000751E ret:[0] sinamailAuthByMail("kyosold@sina.cn", "*", &base_info, 10.235.172.15, &uid, &status), uid[1627185190] status[0] ulUserStat[2592]
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_check_auth_login ICID:6476B0740000751E user[kyosold@sina.cn] is not mobile email
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_auth ICID:6476B0740000751E Success user:kyosold@sina.cn, type:LOGIN
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_mail ICID:6476B0740000751E [from]:FROM:<kyosold@sina.cn>
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] sender_limit_find ICID:6476B0740000751E from:kyosold@sina.cn score:80.000000 in group:default
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] limit_from_check ICID:6476B0740000751E cache no found limit from:kyosold@sina.cn
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_rcpt ICID:6476B0740000751E [rcpt]:TO:<kyosold@qq.com>
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_rcpt ICID:6476B0740000751E ===LOG_SEARCH=== [ICID] from:kyosold@sina.cn to:kyosold@qq.com
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_rcpt ICID:6476B0740000751E ==KF_LOG== smtpd session:6953957D03224F028685A338D6274922 from:kyosold@sina.cn to:kyosold@qq.com
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] limit_host_inc ICID:6476B0740000751E cache no found limit ip:10.235.172.15 mckey:I_aebac0f
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_rcpt ICID:6476B0740000751E from:kyosold@sina.cn, to:kyosold@qq.com
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_data ICID:6476B0740000751E [data] from:kyosold@sina.cn, to:kyosold@qq.com,
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] limit_to_checklock ICID:6476B0740000751E cache no found limit from:kyosold@sina.cn
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] limit_to_check ICID:6476B0740000751E cache no found limit from:kyosold@sina.cn
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] limit_to_check ICID:6476B0740000751E from:kyosold@sina.cn, max_to_day:95 mcvalue:0, rctpok:1
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_data ICID:6476B0740000751E head exist_smail_uiid: 
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] limit_from_inc ICID:6476B0740000751E from:kyosold@sina.cn, ok:1, err:0
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] limit_from_inc ICID:6476B0740000751E cache no found limit from:kyosold@sina.cn
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] limit_from_inc ICID:6476B0740000751E kyosold@sina.cn curr rcpt sum:1 err:0 all sum:1, max 5min sum:25 1hour sum:45
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] limit_from_inc ICID:6476B0740000751E from:kyosold@sina.cn 5min:1 1hour:1
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] is_client_connected ICID:6476B0740000751E client is connected
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] exec_spamfilter ICID:6476B0740000751E Exec:[spam_filter/spam_filter -b/var/qmail/queue/pid/168550002029982000 -r10.235.172.15 -p64577 -fkyosold@sina.cn -n1 -tkyosold@qq.com -cspam_filter/spam_cond.ini -dspam_filter/spam_dict -i553150262446 -I6476B0740000751E -PRELAYLIST -akyosold@sina.cn -D1 -K2 ]
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] exec_spamfilter ICID:6476B0740000751E ===LOG_SEARCH=== [Launch] ICID:6476B0740000751E MID:553150262446 IP:10.235.172.15 Sender:kyosold@sina.cn From:kyosold@sina.cn To:kyosold@qq.com
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] exec_spamfilter ICID:6476B0740000751E ==KF_LOG== run session:6953957D03224F028685A338D6274922 MID:553150262446 R:10.235.172.15 S:kyosold@sina.cn F:kyosold@sina.cn T:kyosold@qq.com
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_data ICID:6476B0740000751E MID:553150262446 from:kyosold@sina.cn to:kyosold@qq.com size:48239
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 IPGROUP:RELAYLIST 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 morethen_nofilter=[20M] 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 start init_parse_mail_fd 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 mail header from:kyosold@sina.cn 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 ===LOG_SEARCH=== [HEADER] ICID:6476B0740000751E MID:553150262446 HeadFrom:kyosold@sina.cn Subject:Genuine HP parts now available 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 mail header to:kyosold@qq.com 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 mail header cc:(null) 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 mail header bcc:(null) 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 IPGROUP:RELAYLIST 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 pro condition_0[sj] mailsize ret[1]:SIZE > 0 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 final condition_0[sj] res[1] env_from[kyosold@sina.cn], so ready action[SPAM_SKIP] 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 ===LOG_SEARCH=== [CONDITION] ICID:6476B0740000751E MID:553150262446 res:1 condition:condition_0 name:sj env_from:kyosold@sina.cn action:SPAM_SKIP 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 ===LOG_SEARCH=== [FILTER] Filter_True:1 ICID:6476B0740000751E MID:553150262446 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 log_headers[Subject: Genuine HP parts now available] filter_true:1 cip:10.235.172.15 envfrom:kyosold@sina.cn envto:kyosold@qq.com 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 condition=[condition_0] ACTION=[SPAM_SKIP], no filter, send mail 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 ==KF_LOG== 553150262446 condition_0 SKIP 10.235.172.15 kyosold@sina.cn Genuine HP parts now available 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 ==SENTSAVESTATUS== 2D8A288D06F44983980306576AF8B3B3-20230531-102700 condition_0 SKIP 10.235.172.15 kyosold@sina.cn Genuine HP parts now available 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 PUBLIC_SECURITY | 10.235.172.15 | 64577 | kyosold@sina.cn | kyosold@qq.com, | Genuine HP parts now available | 48762 | 10.69.2.216 | 0 |  
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 send to:[kyosold@qq.com] 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 send fde to[Tkyosold@qq.com] 
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_quit ICID:6476B0740000751E [quit]:
+May 31 10:27:00 mailadmin-2-216 qmail-smtpd[29982]: [INFO] smtp_quit ICID:6476B0740000751E [SESSION END] client:(10.235.172.15).
+May 31 10:27:00 mailadmin-2-216 tcpserver[31676]: [INFO] client_offline child exit pid:29982 ip:10.235.172.15 connect:0/2000
+May 31 10:27:00 mailadmin-2-216 qmail-queue[29986]: [INFO] received_setup SJ: received:Received: (qmail 29986 invoked by uid 1020); 31 May 2023 10:27:00 +0800 (CST)
+May 31 10:27:00 mailadmin-2-216 qmail-queue[29986]: [INFO] main into the fast delivery
+May 31 10:27:00 mailadmin-2-216 qmail-queue[29986]: [INFO] main arg2=[/var/qmail/queue/pid/168550002029982000]
+May 31 10:27:00 mailadmin-2-216 qmail-queue[29986]: [INFO] main MAIL INO [553150262446] => [553150262446], messfn:[mess/16/553150262446] todofn:[todo/553150262446] intdfn:[intd/553150262446]
+May 31 10:27:00 mailadmin-2-216 qmail-queue[29986]: [INFO] main 553150262446 call triggerpull succ
+May 31 10:27:00 mailadmin-2-216 qmail-send[31681]: [INFO] todo_do new msg:553150262446
+May 31 10:27:00 mailadmin-2-216 qmail-send[31681]: [INFO] todo_do info msg:553150262446 size:48762 from:<kyosold@sina.cn> pq:29986 uid:1020
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 succ unlink file[/var/qmail/queue/pid/168550002029982000] 
+May 31 10:27:00 mailadmin-2-216 spam_filter[29985]: [INFO] 6476B0740000751E 553150262446 250 ok 29985 
+May 31 10:27:00 mailadmin-2-216 qmail-send[31681]: [INFO] del_start starting delivery num:0 id:[4] msg:553150262446 to remote kyosold@qq.com
+May 31 10:27:00 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 1/3000 
+May 31 10:27:00 mailadmin-2-216 qmail-rspawn[31716]: [INFO] getcmd ICID:[6476B0740000751E] MID:[553150262446] local_bind:[null] relay:[] from:[kyosold@sina.cn] to:[kyosold@qq.com]
+May 31 10:27:00 mailadmin-2-216 qmail-remote[29987]: [INFO] main ICID:6476B0740000751E MID:553150262446 args: local_bind:[null] relayhost:[] mail_from:[kyosold@sina.cn] mail_to:[kyosold@qq.com] msg_id:[553150262446] conn_id:[6476B0740000751E] smail_uiid:[2D8A288D06F44983980306576AF8B3B3-20230531-102700]
+May 31 10:27:00 mailadmin-2-216 qmail-remote[29987]: [INFO] main ICID:6476B0740000751E MID:553150262446 ===LOG_SEARCH=== [StartRemote] from:kyosold@sina.cn to:kyosold@qq.com relay:null bind:
+May 31 10:27:00 mailadmin-2-216 qmail-remote[29987]: [INFO] bind_addr_find bind ip use:10.69.2.216 
+May 31 10:27:00 mailadmin-2-216 qmail-remote[29987]: [INFO] main ICID:6476B0740000751E MID:553150262446 set helo name:smtp-2-32.mail.sina.com.cn
+May 31 10:27:00 mailadmin-2-216 qmail-remote[29987]: [INFO] main ICID:6476B0740000751E MID:553150262446 connect host:(183.47.112.51:25) is outer net, bind local ip:(10.69.2.216) heloname:smtp-2-32.mail.sina.com.cn 
+May 31 10:27:00 mailadmin-2-216 qmail-remote[29987]: [INFO] smtp ICID:6476B0740000751E MID:553150262446 connect remote:(183.47.112.51) succcess, Time:1685500020.780578 recv:220 newxmmxszc3-1.qq.com MX QQ Mail Server.
+May 31 10:27:00 mailadmin-2-216 qmail-remote[29987]: [INFO] smtp ICID:6476B0740000751E MID:553150262446 ==LOG_SEARCH=== [GREETING] remote:183.47.112.51 recv:220 newxmmxszc3-1.qq.com MX QQ Mail Server.
+May 31 10:27:00 mailadmin-2-216 qmail-remote[29987]: [INFO] smtp ICID:6476B0740000751E MID:553150262446 ==KF_LOG== remote c:183.47.112.51 recv:220 newxmmxszc3-1.qq.com MX QQ Mail Server.
+May 31 10:27:01 mailadmin-2-216 qmail-remote[29987]: [INFO] blast ICID:6476B0740000751E MID:553150262446 message head length:1362
+May 31 10:27:01 mailadmin-2-216 qmail-remote[29987]: [INFO] quit ICID:6476B0740000751E MID:553150262446 Time:1685500021.522154 from:[kyosold@sina.cn] to:[kyosold@qq.com] bindip:[10.69.2.216] host:[183.47.112.51:25] result:[D] msg:[550 SPF check failed [MALaUR2WyGthzG+uvDnktlowc6di+AkKuEfUclkKgbtcHO0GBTDmoHPPu8x7difrYA==  IP: 49.7.38.38]. https://service.mail.qq.com/detail/122/72.]
+May 31 10:27:01 mailadmin-2-216 qmail-remote[29987]: [INFO] quit ICID:6476B0740000751E MID:553150262446 ===LOG_SEARCH=== [REMOTE] from:kyosold@sina.cn to:kyosold@qq.com bindip:10.69.2.216 host:183.47.112.51:25 result:D msg:550 SPF check failed [MALaUR2WyGthzG+uvDnktlowc6di+AkKuEfUclkKgbtcHO0GBTDmoHPPu8x7difrYA==  IP: 49.7.38.38]. https://service.mail.qq.com/detail/122/72.
+May 31 10:27:01 mailadmin-2-216 qmail-remote[29987]: [INFO] quit ICID:6476B0740000751E MID:553150262446 ==KF_LOG== quit f:kyosold@sina.cn t:kyosold@qq.com b:10.69.2.216 h:183.47.112.51:25 res:D msg:550 SPF check failed [MALaUR2WyGthzG+uvDnktlowc6di+AkKuEfUclkKgbtcHO0GBTDmoHPPu8x7difrYA==  IP: 49.7.38.38]. https://service.mail.qq.com/detail/122/72.
+May 31 10:27:01 mailadmin-2-216 qmail-remote[29987]: ==SENTSAVESTATUS== [INFO] quit M:553150262446 XSID:2D8A288D06F44983980306576AF8B3B3-20230531-102700 Time:1685500021.522154 from:[kyosold@sina.cn] to:[kyosold@qq.com] bindip:[10.69.2.216] host:[183.47.112.51:25] result:[D] msg:[550 SPF check failed [MALaUR2WyGthzG+uvDnktlowc6di+AkKuEfUclkKgbtcHO0GBTDmoHPPu8x7difrYA==  IP: 49.7.38.38]. https://service.mail.qq.com/detail/122/72.]
+May 31 10:27:01 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B0740000751E 553150262446 EPOLLIN fd:4 events:1
+May 31 10:27:01 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B0740000751E 553150262446 EPOLLHUP fd:4 events:16
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] del_dochan delivery num:0 id:4 MID:553150262446 to:kyosold@qq.com failure
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] addbounce id:553150262446 write bounce message:kyosold@qq.com:183.47.112.51:550 SPF check failed [MALaUR2WyGthzG+uvDnktlowc6di+AkKuEfUclkKgbtcHO0GBTDmoHPPu8x7difrYA==  IP: 49.7.38.38]. https://service.mail.qq.com/detail/122/72.
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 0/3000 
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] injectbounce fn2:bounce/553150262446
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] injectbounce mail size:10731, max bounce size:10240.
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] injectbounce bounce size:2276
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] injectbounce flagerror:0
+May 31 10:27:01 mailadmin-2-216 qmail-queue[29990]: [INFO] received_setup SJ: received:Received: (qmail 29990 invoked by uid 1025); 31 May 2023 10:27:01 +0800 (CST)
+May 31 10:27:01 mailadmin-2-216 qmail-queue[29990]: [INFO] pidopen open pidfn:[pid/29990.1685500021.1] messfd:10
+May 31 10:27:01 mailadmin-2-216 qmail-queue[29990]: [INFO] main MAIL INO [1685500021] => [1127673728871848], messfn:[mess/13/1127673728871848] todofn:[todo/1127673728871848] intdfn:[intd/1127673728871848]
+May 31 10:27:01 mailadmin-2-216 qmail-queue[29990]: [INFO] main 1685500021 call triggerpull succ
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] injectbounce bounce msg:553150262446 qp:29990
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] messdone end msg:553150262446
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] todo_do new msg:1127673728871848
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] todo_do info msg:1127673728871848 size:2276 from:<> pq:29990 uid:1025
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] del_start starting delivery num:0 id:[5] msg:1127673728871848 to remote kyosold@sina.cn
+May 31 10:27:01 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 1/3000 
+May 31 10:27:01 mailadmin-2-216 qmail-rspawn[31716]: [INFO] getcmd ICID:[6476B0740000751E] MID:[553150262446] local_bind:[] relay:[] from:[] to:[kyosold@sina.cn]
+May 31 10:27:01 mailadmin-2-216 qmail-remote[29991]: [INFO] main ICID:6476B0740000751E MID:553150262446 args: local_bind:[] relayhost:[] mail_from:[] mail_to:[kyosold@sina.cn] msg_id:[553150262446] conn_id:[6476B0740000751E] smail_uiid:[2D8A288D06F44983980306576AF8B3B3-20230531-102700]
+May 31 10:27:01 mailadmin-2-216 qmail-remote[29991]: [INFO] main ICID:6476B0740000751E MID:553150262446 ===LOG_SEARCH=== [StartRemote] from: to:kyosold@sina.cn relay: bind:
+May 31 10:27:01 mailadmin-2-216 qmail-remote[29991]: [INFO] bind_addr_find bind ip use:10.69.2.216 
+May 31 10:27:01 mailadmin-2-216 qmail-remote[29991]: [INFO] main ICID:6476B0740000751E MID:553150262446 set helo name:smtp-2-32.mail.sina.com.cn
+May 31 10:27:01 mailadmin-2-216 qmail-remote[29991]: [INFO] main ICID:6476B0740000751E MID:553150262446 connect host:(39.156.6.104:25) is outer net, bind local ip:(10.69.2.216) heloname:smtp-2-32.mail.sina.com.cn 
+May 31 10:27:04 mailadmin-2-216 qmail-remote[29991]: [INFO] smtp ICID:6476B0740000751E MID:553150262446 connect remote:(39.156.6.104) succcess, Time:1685500024.488315 recv:220 mx-14-107.mxsmail.fmail.dbl.sinanode.com ESMTP
+May 31 10:27:04 mailadmin-2-216 qmail-remote[29991]: [INFO] smtp ICID:6476B0740000751E MID:553150262446 ==LOG_SEARCH=== [GREETING] remote:39.156.6.104 recv:220 mx-14-107.mxsmail.fmail.dbl.sinanode.com ESMTP
+May 31 10:27:04 mailadmin-2-216 qmail-remote[29991]: [INFO] smtp ICID:6476B0740000751E MID:553150262446 ==KF_LOG== remote c:39.156.6.104 recv:220 mx-14-107.mxsmail.fmail.dbl.sinanode.com ESMTP
+May 31 10:27:04 mailadmin-2-216 qmail-remote[29991]: [INFO] blast ICID:6476B0740000751E MID:553150262446 message head length:240
+May 31 10:27:04 mailadmin-2-216 qmail-remote[29991]: [INFO] quit ICID:6476B0740000751E MID:553150262446 Time:1685500024.520379 from:[] to:[kyosold@sina.cn] bindip:[10.69.2.216] host:[39.156.6.104:25] result:[K] msg:[250 ok queue id 47531623855238]
+May 31 10:27:04 mailadmin-2-216 qmail-remote[29991]: [INFO] quit ICID:6476B0740000751E MID:553150262446 ===LOG_SEARCH=== [REMOTE] from: to:kyosold@sina.cn bindip:10.69.2.216 host:39.156.6.104:25 result:K msg:250 ok queue id 47531623855238
+May 31 10:27:04 mailadmin-2-216 qmail-remote[29991]: [INFO] quit ICID:6476B0740000751E MID:553150262446 ==KF_LOG== quit f: t:kyosold@sina.cn b:10.69.2.216 h:39.156.6.104:25 res:K msg:250 ok queue id 47531623855238
+May 31 10:27:04 mailadmin-2-216 qmail-remote[29991]: ==SENTSAVESTATUS== [INFO] quit M:553150262446 XSID:2D8A288D06F44983980306576AF8B3B3-20230531-102700 Time:1685500024.520379 from:[] to:[kyosold@sina.cn] bindip:[10.69.2.216] host:[39.156.6.104:25] result:[K] msg:[250 ok queue id 47531623855238]
+May 31 10:27:04 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B0740000751E 553150262446 EPOLLIN fd:4 events:1
+May 31 10:27:04 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B0740000751E 553150262446 EPOLLHUP fd:4 events:16
+May 31 10:27:04 mailadmin-2-216 qmail-send[31681]: [INFO] del_dochan delivery num:0 id:5 MID:1127673728871848 to:kyosold@sina.cn success
+May 31 10:27:04 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 0/3000 
+May 31 10:27:04 mailadmin-2-216 qmail-send[31681]: [INFO] messdone end msg:1127673728871848
+May 31 10:32:03 mailadmin-2-216 tcpserver[31676]: [INFO] client_online child pid:31195 ip:10.235.172.15 connect:1/2000
+May 31 10:32:03 mailadmin-2-216 tcpserver[31195]: [INFO] child_init ICID:6476B1A3000079DB connect Time:1685500323.571127
+May 31 10:32:03 mailadmin-2-216 tcpserver[31195]: [INFO] is_ip_in_super_blacklist ICID:6476B1A3000079DB super_black_ip(/var/qmail/control/super_black_ip) is exists and is readable
+May 31 10:32:03 mailadmin-2-216 tcpserver[31195]: [INFO] ipgroup_find ICID:6476B1A3000079DB group:RELAYLIST, policy:SMTPAUTH
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] main ICID:6476B1A3000079DB [SESSION BEGIN] client:(10.235.172.15) Time:1685500323.587685 IPGroup:RELAYLIST domain:unknown
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_ehlo ICID:6476B1A3000079DB [ehlo]:GraysondeMacBook-Pro.local
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] dohelo ICID:6476B1A3000079DB helohost:GraysondeMacBook-Pro.local
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_auth ICID:6476B1A3000079DB [auth]:LOGIN
+May 31 10:32:03 mailadmin-2-216 libsinamail.ldap[31195]: [info] limit : mc_get() in white, key:auth_10.235.172.15_kyosold@sina.cn [white_check():705]
+May 31 10:32:03 mailadmin-2-216 libsinamail.ldap[31195]: [info] auth by sso cache ok, ip:10.235.172.15, email:kyosold@sina.cn [smAuthBySSO_EX():399]
+May 31 10:32:03 mailadmin-2-216 libsinamail.ldap[31195]: [info] auth by sso, ip:10.235.172.15, email:kyosold@sina.cn, ret:0 [smAuthInfo_V1():386]
+May 31 10:32:03 mailadmin-2-216 libsinamail.ldap[31195]: [info] Auth successful, ip:10.235.172.15, email:kyosold@sina.cn, actual email:kyosold@sina.cn [smAuthInfo_V1():412]
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_check_auth_login ICID:6476B1A3000079DB ret:[0] sinamailAuthByMail("kyosold@sina.cn", "*", &base_info, 10.235.172.15, &uid, &status), uid[-1] status[-1] ulUserStat[2592]
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_check_auth_login ICID:6476B1A3000079DB user[kyosold@sina.cn] is not mobile email
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_auth ICID:6476B1A3000079DB Success user:kyosold@sina.cn, type:LOGIN
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_mail ICID:6476B1A3000079DB [from]:FROM:<kyosold@sina.cn>
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] sender_limit_find ICID:6476B1A3000079DB from:kyosold@sina.cn score:80.000000 in group:default
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] limit_from_check ICID:6476B1A3000079DB from:kyosold@sina.cn state:0 unlock time:0
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_rcpt ICID:6476B1A3000079DB [rcpt]:TO:<songjian@gpkeys.com>
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_rcpt ICID:6476B1A3000079DB ===LOG_SEARCH=== [ICID] from:kyosold@sina.cn to:songjian@gpkeys.com
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_rcpt ICID:6476B1A3000079DB ==KF_LOG== smtpd session:FA86FC3B3EF54ED59BA64B2C9985585D from:kyosold@sina.cn to:songjian@gpkeys.com
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] limit_host_inc ICID:6476B1A3000079DB current minute idx:5 sum:1 err:0 count sum:2 err:0
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_rcpt ICID:6476B1A3000079DB from:kyosold@sina.cn, to:songjian@gpkeys.com
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_data ICID:6476B1A3000079DB [data] from:kyosold@sina.cn, to:songjian@gpkeys.com,
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] limit_to_checklock ICID:6476B1A3000079DB cache no found limit from:kyosold@sina.cn
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] limit_to_check ICID:6476B1A3000079DB from:kyosold@sina.cn, max_to_day:95 mcvalue:1, rctpok:1
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_data ICID:6476B1A3000079DB head exist_smail_uiid: 
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] limit_from_inc ICID:6476B1A3000079DB from:kyosold@sina.cn, ok:1, err:0
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] limit_from_inc ICID:6476B1A3000079DB kyosold@sina.cn curr rcpt sum:1 err:0 all sum:2, max 5min sum:25 1hour sum:45
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] limit_from_inc ICID:6476B1A3000079DB from:kyosold@sina.cn 5min:1 1hour:2
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] is_client_connected ICID:6476B1A3000079DB client is connected
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] exec_spamfilter ICID:6476B1A3000079DB Exec:[spam_filter/spam_filter -b/var/qmail/queue/pid/168550032331195000 -r10.235.172.15 -p64958 -fkyosold@sina.cn -n1 -tsongjian@gpkeys.com -cspam_filter/spam_cond.ini -dspam_filter/spam_dict -i661039262446 -I6476B1A3000079DB -PRELAYLIST -akyosold@sina.cn -D1 -K2 ]
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] exec_spamfilter ICID:6476B1A3000079DB ===LOG_SEARCH=== [Launch] ICID:6476B1A3000079DB MID:661039262446 IP:10.235.172.15 Sender:kyosold@sina.cn From:kyosold@sina.cn To:songjian@gpkeys.com
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] exec_spamfilter ICID:6476B1A3000079DB ==KF_LOG== run session:FA86FC3B3EF54ED59BA64B2C9985585D MID:661039262446 R:10.235.172.15 S:kyosold@sina.cn F:kyosold@sina.cn T:songjian@gpkeys.com
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_data ICID:6476B1A3000079DB MID:661039262446 from:kyosold@sina.cn to:songjian@gpkeys.com size:48244
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 IPGROUP:RELAYLIST 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 morethen_nofilter=[20M] 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 start init_parse_mail_fd 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 mail header from:kyosold@sina.cn 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 ===LOG_SEARCH=== [HEADER] ICID:6476B1A3000079DB MID:661039262446 HeadFrom:kyosold@sina.cn Subject:Genuine HP parts now available 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 mail header to:songjian@gpkeys.com 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 mail header cc:(null) 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 mail header bcc:(null) 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 IPGROUP:RELAYLIST 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 pro condition_0[sj] mailsize ret[1]:SIZE > 0 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 final condition_0[sj] res[1] env_from[kyosold@sina.cn], so ready action[SPAM_SKIP] 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 ===LOG_SEARCH=== [CONDITION] ICID:6476B1A3000079DB MID:661039262446 res:1 condition:condition_0 name:sj env_from:kyosold@sina.cn action:SPAM_SKIP 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 ===LOG_SEARCH=== [FILTER] Filter_True:1 ICID:6476B1A3000079DB MID:661039262446 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 log_headers[Subject: Genuine HP parts now available] filter_true:1 cip:10.235.172.15 envfrom:kyosold@sina.cn envto:songjian@gpkeys.com 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 condition=[condition_0] ACTION=[SPAM_SKIP], no filter, send mail 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 ==KF_LOG== 661039262446 condition_0 SKIP 10.235.172.15 kyosold@sina.cn Genuine HP parts now available 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 ==SENTSAVESTATUS== E9E39622A81B47E1B5EFBD6DC8B6BA4C-20230531-103203 condition_0 SKIP 10.235.172.15 kyosold@sina.cn Genuine HP parts now available 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 PUBLIC_SECURITY | 10.235.172.15 | 64958 | kyosold@sina.cn | songjian@gpkeys.com, | Genuine HP parts now available | 48767 | 10.69.2.216 | 0 |  
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 send to:[songjian@gpkeys.com] 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 send fde to[Tsongjian@gpkeys.com] 
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_quit ICID:6476B1A3000079DB [quit]:
+May 31 10:32:03 mailadmin-2-216 qmail-smtpd[31195]: [INFO] smtp_quit ICID:6476B1A3000079DB [SESSION END] client:(10.235.172.15).
+May 31 10:32:03 mailadmin-2-216 tcpserver[31676]: [INFO] client_offline child exit pid:31195 ip:10.235.172.15 connect:0/2000
+May 31 10:32:03 mailadmin-2-216 qmail-queue[31198]: [INFO] received_setup SJ: received:Received: (qmail 31198 invoked by uid 1020); 31 May 2023 10:32:03 +0800 (CST)
+May 31 10:32:03 mailadmin-2-216 qmail-queue[31198]: [INFO] main into the fast delivery
+May 31 10:32:03 mailadmin-2-216 qmail-queue[31198]: [INFO] main arg2=[/var/qmail/queue/pid/168550032331195000]
+May 31 10:32:03 mailadmin-2-216 qmail-queue[31198]: [INFO] main MAIL INO [661039262446] => [661039262446], messfn:[mess/15/661039262446] todofn:[todo/661039262446] intdfn:[intd/661039262446]
+May 31 10:32:03 mailadmin-2-216 qmail-queue[31198]: [INFO] main 661039262446 call triggerpull succ
+May 31 10:32:03 mailadmin-2-216 qmail-send[31681]: [INFO] todo_do new msg:661039262446
+May 31 10:32:03 mailadmin-2-216 qmail-send[31681]: [INFO] todo_do info msg:661039262446 size:48767 from:<kyosold@sina.cn> pq:31198 uid:1020
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 succ unlink file[/var/qmail/queue/pid/168550032331195000] 
+May 31 10:32:03 mailadmin-2-216 spam_filter[31197]: [INFO] 6476B1A3000079DB 661039262446 250 ok 31197 
+May 31 10:32:03 mailadmin-2-216 qmail-send[31681]: [INFO] del_start starting delivery num:0 id:[6] msg:661039262446 to remote songjian@gpkeys.com
+May 31 10:32:03 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 1/3000 
+May 31 10:32:03 mailadmin-2-216 qmail-rspawn[31716]: [INFO] getcmd ICID:[6476B1A3000079DB] MID:[661039262446] local_bind:[null] relay:[] from:[kyosold@sina.cn] to:[songjian@gpkeys.com]
+May 31 10:32:03 mailadmin-2-216 qmail-remote[31199]: [INFO] main ICID:6476B1A3000079DB MID:661039262446 args: local_bind:[null] relayhost:[] mail_from:[kyosold@sina.cn] mail_to:[songjian@gpkeys.com] msg_id:[661039262446] conn_id:[6476B1A3000079DB] smail_uiid:[E9E39622A81B47E1B5EFBD6DC8B6BA4C-20230531-103203]
+May 31 10:32:03 mailadmin-2-216 qmail-remote[31199]: [INFO] main ICID:6476B1A3000079DB MID:661039262446 ===LOG_SEARCH=== [StartRemote] from:kyosold@sina.cn to:songjian@gpkeys.com relay:null bind:
+May 31 10:32:03 mailadmin-2-216 qmail-remote[31199]: [INFO] bind_addr_find bind ip use:10.69.2.216 
+May 31 10:32:03 mailadmin-2-216 qmail-remote[31199]: [INFO] main ICID:6476B1A3000079DB MID:661039262446 set helo name:smtp-2-32.mail.sina.com.cn
+May 31 10:32:03 mailadmin-2-216 qmail-remote[31199]: [INFO] main ICID:6476B1A3000079DB MID:661039262446 connect host:(49.7.36.231:25) is outer net, bind local ip:(10.69.2.216) heloname:smtp-2-32.mail.sina.com.cn 
+May 31 10:32:03 mailadmin-2-216 qmail-remote[31199]: [INFO] smtp ICID:6476B1A3000079DB MID:661039262446 connect remote:(49.7.36.231) succcess, Time:1685500323.969225 recv:220 mx-13-26.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:32:03 mailadmin-2-216 qmail-remote[31199]: [INFO] smtp ICID:6476B1A3000079DB MID:661039262446 ==LOG_SEARCH=== [GREETING] remote:49.7.36.231 recv:220 mx-13-26.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:32:03 mailadmin-2-216 qmail-remote[31199]: [INFO] smtp ICID:6476B1A3000079DB MID:661039262446 ==KF_LOG== remote c:49.7.36.231 recv:220 mx-13-26.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:32:04 mailadmin-2-216 qmail-remote[31199]: [INFO] blast ICID:6476B1A3000079DB MID:661039262446 message head length:1367
+May 31 10:32:04 mailadmin-2-216 qmail-remote[31199]: [INFO] quit ICID:6476B1A3000079DB MID:661039262446 Time:1685500324.014890 from:[kyosold@sina.cn] to:[songjian@gpkeys.com] bindip:[10.69.2.216] host:[49.7.36.231:25] result:[K] msg:[250 ok queue id 2ADA33FB44DD46228307378701D6463D]
+May 31 10:32:04 mailadmin-2-216 qmail-remote[31199]: [INFO] quit ICID:6476B1A3000079DB MID:661039262446 ===LOG_SEARCH=== [REMOTE] from:kyosold@sina.cn to:songjian@gpkeys.com bindip:10.69.2.216 host:49.7.36.231:25 result:K msg:250 ok queue id 2ADA33FB44DD46228307378701D6463D
+May 31 10:32:04 mailadmin-2-216 qmail-remote[31199]: [INFO] quit ICID:6476B1A3000079DB MID:661039262446 ==KF_LOG== quit f:kyosold@sina.cn t:songjian@gpkeys.com b:10.69.2.216 h:49.7.36.231:25 res:K msg:250 ok queue id 2ADA33FB44DD46228307378701D6463D
+May 31 10:32:04 mailadmin-2-216 qmail-remote[31199]: ==SENTSAVESTATUS== [INFO] quit M:661039262446 XSID:E9E39622A81B47E1B5EFBD6DC8B6BA4C-20230531-103203 Time:1685500324.014890 from:[kyosold@sina.cn] to:[songjian@gpkeys.com] bindip:[10.69.2.216] host:[49.7.36.231:25] result:[K] msg:[250 ok queue id 2ADA33FB44DD46228307378701D6463D]
+May 31 10:32:04 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B1A3000079DB 661039262446 EPOLLIN fd:4 events:1
+May 31 10:32:04 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B1A3000079DB 661039262446 EPOLLHUP fd:4 events:16
+May 31 10:32:04 mailadmin-2-216 qmail-send[31681]: [INFO] del_dochan delivery num:0 id:6 MID:661039262446 to:songjian@gpkeys.com success
+May 31 10:32:04 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 0/3000 
+May 31 10:32:04 mailadmin-2-216 qmail-send[31681]: [INFO] messdone end msg:661039262446
+May 31 10:34:05 mailadmin-2-216 tcpserver[31676]: [INFO] client_online child pid:31339 ip:10.235.172.15 connect:1/2000
+May 31 10:34:05 mailadmin-2-216 tcpserver[31339]: [INFO] child_init ICID:6476B21D00007A6B connect Time:1685500445.250825
+May 31 10:34:05 mailadmin-2-216 tcpserver[31339]: [INFO] is_ip_in_super_blacklist ICID:6476B21D00007A6B super_black_ip(/var/qmail/control/super_black_ip) is exists and is readable
+May 31 10:34:05 mailadmin-2-216 tcpserver[31339]: [INFO] ipgroup_find ICID:6476B21D00007A6B group:RELAYLIST, policy:SMTPAUTH
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] main ICID:6476B21D00007A6B [SESSION BEGIN] client:(10.235.172.15) Time:1685500445.270062 IPGroup:RELAYLIST domain:unknown
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_ehlo ICID:6476B21D00007A6B [ehlo]:GraysondeMacBook-Pro.local
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] dohelo ICID:6476B21D00007A6B helohost:GraysondeMacBook-Pro.local
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_auth ICID:6476B21D00007A6B [auth]:LOGIN
+May 31 10:34:05 mailadmin-2-216 libsinamail.ldap[31339]: [info] limit : mc_get() in white, key:auth_10.235.172.15_kyosold@sina.cn [white_check():705]
+May 31 10:34:05 mailadmin-2-216 libsinamail.ldap[31339]: [info] auth by sso cache ok, ip:10.235.172.15, email:kyosold@sina.cn [smAuthBySSO_EX():399]
+May 31 10:34:05 mailadmin-2-216 libsinamail.ldap[31339]: [info] auth by sso, ip:10.235.172.15, email:kyosold@sina.cn, ret:0 [smAuthInfo_V1():386]
+May 31 10:34:05 mailadmin-2-216 libsinamail.ldap[31339]: [info] Auth successful, ip:10.235.172.15, email:kyosold@sina.cn, actual email:kyosold@sina.cn [smAuthInfo_V1():412]
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_check_auth_login ICID:6476B21D00007A6B ret:[0] sinamailAuthByMail("kyosold@sina.cn", "*", &base_info, 10.235.172.15, &uid, &status), uid[-1] status[-1] ulUserStat[2592]
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_check_auth_login ICID:6476B21D00007A6B user[kyosold@sina.cn] is not mobile email
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_auth ICID:6476B21D00007A6B Success user:kyosold@sina.cn, type:LOGIN
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_mail ICID:6476B21D00007A6B [from]:FROM:<kyosold@sina.cn>
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] sender_limit_find ICID:6476B21D00007A6B from:kyosold@sina.cn score:80.000000 in group:default
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] limit_from_check ICID:6476B21D00007A6B from:kyosold@sina.cn state:0 unlock time:0
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_rcpt ICID:6476B21D00007A6B [rcpt]:TO:<songjian@gpkeys.com>
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_rcpt ICID:6476B21D00007A6B ===LOG_SEARCH=== [ICID] from:kyosold@sina.cn to:songjian@gpkeys.com
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_rcpt ICID:6476B21D00007A6B ==KF_LOG== smtpd session:2EBDF10B731947FABC04D613DD6B3C11 from:kyosold@sina.cn to:songjian@gpkeys.com
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] limit_host_inc ICID:6476B21D00007A6B current minute idx:7 sum:1 err:0 count sum:3 err:0
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_rcpt ICID:6476B21D00007A6B from:kyosold@sina.cn, to:songjian@gpkeys.com
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_rcpt ICID:6476B21D00007A6B [rcpt]:TO:<kyosold@sina.cn>
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_rcpt ICID:6476B21D00007A6B ===LOG_SEARCH=== [ICID] from:kyosold@sina.cn to:kyosold@sina.cn
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_rcpt ICID:6476B21D00007A6B ==KF_LOG== smtpd session:2EBDF10B731947FABC04D613DD6B3C11 from:kyosold@sina.cn to:kyosold@sina.cn
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] limit_host_inc ICID:6476B21D00007A6B current minute idx:7 sum:2 err:0 count sum:4 err:0
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_rcpt ICID:6476B21D00007A6B from:kyosold@sina.cn, to:kyosold@sina.cn
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_data ICID:6476B21D00007A6B [data] from:kyosold@sina.cn, to:songjian@gpkeys.com,kyosold@sina.cn,
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] limit_to_checklock ICID:6476B21D00007A6B cache no found limit from:kyosold@sina.cn
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] limit_to_check ICID:6476B21D00007A6B from:kyosold@sina.cn, max_to_day:95 mcvalue:2, rctpok:2
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_data ICID:6476B21D00007A6B head exist_smail_uiid: 
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] limit_from_inc ICID:6476B21D00007A6B from:kyosold@sina.cn, ok:2, err:0
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] limit_from_inc ICID:6476B21D00007A6B kyosold@sina.cn curr rcpt sum:3 err:0 all sum:4, max 5min sum:25 1hour sum:45
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] limit_from_inc ICID:6476B21D00007A6B from:kyosold@sina.cn 5min:3 1hour:4
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] is_client_connected ICID:6476B21D00007A6B client is connected
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] exec_spamfilter ICID:6476B21D00007A6B Exec:[spam_filter/spam_filter -b/var/qmail/queue/pid/168550044531339000 -r10.235.172.15 -p65118 -fkyosold@sina.cn -n2 -tsongjian@gpkeys.com,kyosold@sina.cn -cspam_filter/spam_cond.ini -dspam_filter/spam_dict -i359042262446 -I6476B21D00007A6B -PRELAYLIST -akyosold@sina.cn -D1 -K2 ]
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] exec_spamfilter ICID:6476B21D00007A6B ===LOG_SEARCH=== [Launch] ICID:6476B21D00007A6B MID:359042262446 IP:10.235.172.15 Sender:kyosold@sina.cn From:kyosold@sina.cn To:songjian@gpkeys.com,kyosold@sina.cn
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] exec_spamfilter ICID:6476B21D00007A6B ==KF_LOG== run session:2EBDF10B731947FABC04D613DD6B3C11 MID:359042262446 R:10.235.172.15 S:kyosold@sina.cn F:kyosold@sina.cn T:songjian@gpkeys.com,kyosold@sina.cn
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_data ICID:6476B21D00007A6B MID:359042262446 from:kyosold@sina.cn to:songjian@gpkeys.com,kyosold@sina.cn size:48264
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 IPGROUP:RELAYLIST 
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_quit ICID:6476B21D00007A6B [quit]:
+May 31 10:34:05 mailadmin-2-216 qmail-smtpd[31339]: [INFO] smtp_quit ICID:6476B21D00007A6B [SESSION END] client:(10.235.172.15).
+May 31 10:34:05 mailadmin-2-216 tcpserver[31676]: [INFO] client_offline child exit pid:31339 ip:10.235.172.15 connect:0/2000
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 morethen_nofilter=[20M] 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 start init_parse_mail_fd 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 mail header from:kyosold@sina.cn 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 ===LOG_SEARCH=== [HEADER] ICID:6476B21D00007A6B MID:359042262446 HeadFrom:kyosold@sina.cn Subject:Genuine HP parts now available 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 mail header to:songjian@gpkeys.com 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 mail header cc:(null) 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 mail header bcc:(null) 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 IPGROUP:RELAYLIST 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 pro condition_0[sj] mailsize ret[1]:SIZE > 0 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 final condition_0[sj] res[1] env_from[kyosold@sina.cn], so ready action[SPAM_SKIP] 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 ===LOG_SEARCH=== [CONDITION] ICID:6476B21D00007A6B MID:359042262446 res:1 condition:condition_0 name:sj env_from:kyosold@sina.cn action:SPAM_SKIP 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 ===LOG_SEARCH=== [FILTER] Filter_True:1 ICID:6476B21D00007A6B MID:359042262446 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 log_headers[Subject: Genuine HP parts now available] filter_true:1 cip:10.235.172.15 envfrom:kyosold@sina.cn envto:songjian@gpkeys.com 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 condition=[condition_0] ACTION=[SPAM_SKIP], no filter, send mail 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 ==KF_LOG== 359042262446 condition_0 SKIP 10.235.172.15 kyosold@sina.cn Genuine HP parts now available 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 ==SENTSAVESTATUS== FE59D32C03E9420497B1FA84704A42B3-20230531-103405 condition_0 SKIP 10.235.172.15 kyosold@sina.cn Genuine HP parts now available 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 PUBLIC_SECURITY | 10.235.172.15 | 65118 | kyosold@sina.cn | songjian@gpkeys.com,kyosold@sina.cn, | Genuine HP parts now available | 48787 | 10.69.2.216 | 0 |  
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 send to:[songjian@gpkeys.com] 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 send to:[kyosold@sina.cn] 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 send fde to[Tsongjian@gpkeys.com] 
+May 31 10:34:05 mailadmin-2-216 qmail-queue[31342]: [INFO] received_setup SJ: received:Received: (qmail 31342 invoked by uid 1020); 31 May 2023 10:34:05 +0800 (CST)
+May 31 10:34:05 mailadmin-2-216 qmail-queue[31342]: [INFO] main into the fast delivery
+May 31 10:34:05 mailadmin-2-216 qmail-queue[31342]: [INFO] main arg2=[/var/qmail/queue/pid/168550044531339000]
+May 31 10:34:05 mailadmin-2-216 qmail-queue[31342]: [INFO] main MAIL INO [359042262446] => [359042262446], messfn:[mess/19/359042262446] todofn:[todo/359042262446] intdfn:[intd/359042262446]
+May 31 10:34:05 mailadmin-2-216 qmail-queue[31342]: [INFO] main 359042262446 call triggerpull succ
+May 31 10:34:05 mailadmin-2-216 qmail-send[31681]: [INFO] todo_do new msg:359042262446
+May 31 10:34:05 mailadmin-2-216 qmail-send[31681]: [INFO] todo_do info msg:359042262446 size:48787 from:<kyosold@sina.cn> pq:31342 uid:1020
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 succ unlink file[/var/qmail/queue/pid/168550044531339000] 
+May 31 10:34:05 mailadmin-2-216 spam_filter[31341]: [INFO] 6476B21D00007A6B 359042262446 250 ok 31341 
+May 31 10:34:05 mailadmin-2-216 qmail-send[31681]: [INFO] del_start starting delivery num:0 id:[7] msg:359042262446 to remote songjian@gpkeys.com
+May 31 10:34:05 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 1/3000 
+May 31 10:34:05 mailadmin-2-216 qmail-send[31681]: [INFO] del_start starting delivery num:1 id:[8] msg:359042262446 to remote kyosold@sina.cn
+May 31 10:34:05 mailadmin-2-216 qmail-rspawn[31716]: [INFO] getcmd ICID:[6476B21D00007A6B] MID:[359042262446] local_bind:[null] relay:[] from:[kyosold@sina.cn] to:[songjian@gpkeys.com]
+May 31 10:34:05 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 2/3000 
+May 31 10:34:05 mailadmin-2-216 qmail-rspawn[31716]: [INFO] getcmd ICID:[6476B21D00007A6B] MID:[359042262446] local_bind:[null] relay:[] from:[kyosold@sina.cn] to:[kyosold@sina.cn]
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: [INFO] main ICID:6476B21D00007A6B MID:359042262446 args: local_bind:[null] relayhost:[] mail_from:[kyosold@sina.cn] mail_to:[songjian@gpkeys.com] msg_id:[359042262446] conn_id:[6476B21D00007A6B] smail_uiid:[FE59D32C03E9420497B1FA84704A42B3-20230531-103405]
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: [INFO] main ICID:6476B21D00007A6B MID:359042262446 ===LOG_SEARCH=== [StartRemote] from:kyosold@sina.cn to:songjian@gpkeys.com relay:null bind:
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31344]: [INFO] main ICID:6476B21D00007A6B MID:359042262446 args: local_bind:[null] relayhost:[] mail_from:[kyosold@sina.cn] mail_to:[kyosold@sina.cn] msg_id:[359042262446] conn_id:[6476B21D00007A6B] smail_uiid:[FE59D32C03E9420497B1FA84704A42B3-20230531-103405]
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31344]: [INFO] main ICID:6476B21D00007A6B MID:359042262446 ===LOG_SEARCH=== [StartRemote] from:kyosold@sina.cn to:kyosold@sina.cn relay:null bind:
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: [INFO] bind_addr_find bind ip use:10.69.2.216 
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: [INFO] main ICID:6476B21D00007A6B MID:359042262446 set helo name:smtp-2-32.mail.sina.com.cn
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31344]: [INFO] bind_addr_find bind ip use:10.69.2.216 
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31344]: [INFO] main ICID:6476B21D00007A6B MID:359042262446 set helo name:smtp-2-32.mail.sina.com.cn
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31344]: [INFO] main ICID:6476B21D00007A6B MID:359042262446 connect host:(39.156.6.104:25) is outer net, bind local ip:(10.69.2.216) heloname:smtp-2-32.mail.sina.com.cn 
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: [INFO] main ICID:6476B21D00007A6B MID:359042262446 connect host:(49.7.36.231:25) is outer net, bind local ip:(10.69.2.216) heloname:smtp-2-32.mail.sina.com.cn 
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: [INFO] smtp ICID:6476B21D00007A6B MID:359042262446 connect remote:(49.7.36.231) succcess, Time:1685500445.634992 recv:220 mx-13-27.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: [INFO] smtp ICID:6476B21D00007A6B MID:359042262446 ==LOG_SEARCH=== [GREETING] remote:49.7.36.231 recv:220 mx-13-27.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: [INFO] smtp ICID:6476B21D00007A6B MID:359042262446 ==KF_LOG== remote c:49.7.36.231 recv:220 mx-13-27.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: [INFO] blast ICID:6476B21D00007A6B MID:359042262446 message head length:1388
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: [INFO] quit ICID:6476B21D00007A6B MID:359042262446 Time:1685500445.671420 from:[kyosold@sina.cn] to:[songjian@gpkeys.com] bindip:[10.69.2.216] host:[49.7.36.231:25] result:[K] msg:[250 ok queue id E0FF030260E14DE1A6ED4CAD2910758E]
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: [INFO] quit ICID:6476B21D00007A6B MID:359042262446 ===LOG_SEARCH=== [REMOTE] from:kyosold@sina.cn to:songjian@gpkeys.com bindip:10.69.2.216 host:49.7.36.231:25 result:K msg:250 ok queue id E0FF030260E14DE1A6ED4CAD2910758E
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: [INFO] quit ICID:6476B21D00007A6B MID:359042262446 ==KF_LOG== quit f:kyosold@sina.cn t:songjian@gpkeys.com b:10.69.2.216 h:49.7.36.231:25 res:K msg:250 ok queue id E0FF030260E14DE1A6ED4CAD2910758E
+May 31 10:34:05 mailadmin-2-216 qmail-remote[31343]: ==SENTSAVESTATUS== [INFO] quit M:359042262446 XSID:FE59D32C03E9420497B1FA84704A42B3-20230531-103405 Time:1685500445.671420 from:[kyosold@sina.cn] to:[songjian@gpkeys.com] bindip:[10.69.2.216] host:[49.7.36.231:25] result:[K] msg:[250 ok queue id E0FF030260E14DE1A6ED4CAD2910758E]
+May 31 10:34:05 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B21D00007A6B 359042262446 EPOLLIN fd:4 events:1
+May 31 10:34:05 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B21D00007A6B 359042262446 EPOLLHUP fd:4 events:16
+May 31 10:34:05 mailadmin-2-216 qmail-send[31681]: [INFO] del_dochan delivery num:0 id:7 MID:359042262446 to:songjian@gpkeys.com success
+May 31 10:34:05 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 1/3000 
+May 31 10:34:06 mailadmin-2-216 qmail-remote[31344]: [INFO] smtp ICID:6476B21D00007A6B MID:359042262446 connect remote:(39.156.6.104) succcess, Time:1685500446.022616 recv:220 mx-14-108.mxsmail.fmail.dbl.sinanode.com ESMTP
+May 31 10:34:06 mailadmin-2-216 qmail-remote[31344]: [INFO] smtp ICID:6476B21D00007A6B MID:359042262446 ==LOG_SEARCH=== [GREETING] remote:39.156.6.104 recv:220 mx-14-108.mxsmail.fmail.dbl.sinanode.com ESMTP
+May 31 10:34:06 mailadmin-2-216 qmail-remote[31344]: [INFO] smtp ICID:6476B21D00007A6B MID:359042262446 ==KF_LOG== remote c:39.156.6.104 recv:220 mx-14-108.mxsmail.fmail.dbl.sinanode.com ESMTP
+May 31 10:34:06 mailadmin-2-216 qmail-remote[31344]: [INFO] blast ICID:6476B21D00007A6B MID:359042262446 message head length:1388
+May 31 10:34:06 mailadmin-2-216 qmail-remote[31344]: [INFO] quit ICID:6476B21D00007A6B MID:359042262446 Time:1685500446.394598 from:[kyosold@sina.cn] to:[kyosold@sina.cn] bindip:[10.69.2.216] host:[39.156.6.104:25] result:[K] msg:[250 ok queue id 31702696993329]
+May 31 10:34:06 mailadmin-2-216 qmail-remote[31344]: [INFO] quit ICID:6476B21D00007A6B MID:359042262446 ===LOG_SEARCH=== [REMOTE] from:kyosold@sina.cn to:kyosold@sina.cn bindip:10.69.2.216 host:39.156.6.104:25 result:K msg:250 ok queue id 31702696993329
+May 31 10:34:06 mailadmin-2-216 qmail-remote[31344]: [INFO] quit ICID:6476B21D00007A6B MID:359042262446 ==KF_LOG== quit f:kyosold@sina.cn t:kyosold@sina.cn b:10.69.2.216 h:39.156.6.104:25 res:K msg:250 ok queue id 31702696993329
+May 31 10:34:06 mailadmin-2-216 qmail-remote[31344]: ==SENTSAVESTATUS== [INFO] quit M:359042262446 XSID:FE59D32C03E9420497B1FA84704A42B3-20230531-103405 Time:1685500446.394598 from:[kyosold@sina.cn] to:[kyosold@sina.cn] bindip:[10.69.2.216] host:[39.156.6.104:25] result:[K] msg:[250 ok queue id 31702696993329]
+May 31 10:34:06 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B21D00007A6B 359042262446 EPOLLIN fd:6 events:1
+May 31 10:34:06 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B21D00007A6B 359042262446 EPOLLHUP fd:6 events:16
+May 31 10:34:06 mailadmin-2-216 qmail-send[31681]: [INFO] del_dochan delivery num:1 id:8 MID:359042262446 to:kyosold@sina.cn success
+May 31 10:34:06 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 0/3000 
+May 31 10:34:06 mailadmin-2-216 qmail-send[31681]: [INFO] messdone end msg:359042262446
+May 31 10:39:44 mailadmin-2-216 tcpserver[31676]: [INFO] client_online child pid:31766 ip:10.235.172.15 connect:1/2000
+May 31 10:39:44 mailadmin-2-216 tcpserver[31766]: [INFO] child_init ICID:6476B37000007C16 connect Time:1685500784.903799
+May 31 10:39:44 mailadmin-2-216 tcpserver[31766]: [INFO] is_ip_in_super_blacklist ICID:6476B37000007C16 super_black_ip(/var/qmail/control/super_black_ip) is exists and is readable
+May 31 10:39:44 mailadmin-2-216 tcpserver[31766]: [INFO] ipgroup_find ICID:6476B37000007C16 group:RELAYLIST, policy:SMTPAUTH
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] main ICID:6476B37000007C16 [SESSION BEGIN] client:(10.235.172.15) Time:1685500784.922886 IPGroup:RELAYLIST domain:unknown
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_ehlo ICID:6476B37000007C16 [ehlo]:GraysondeMacBook-Pro.local
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] dohelo ICID:6476B37000007C16 helohost:GraysondeMacBook-Pro.local
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_auth ICID:6476B37000007C16 [auth]:LOGIN
+May 31 10:39:44 mailadmin-2-216 libsinamail.ldap[31766]: [info] limit : mc_get() in white, key:auth_10.235.172.15_kyosold@sina.cn [white_check():705]
+May 31 10:39:44 mailadmin-2-216 libsinamail.ldap[31766]: [info] auth by sso cache ok, ip:10.235.172.15, email:kyosold@sina.cn [smAuthBySSO_EX():399]
+May 31 10:39:44 mailadmin-2-216 libsinamail.ldap[31766]: [info] auth by sso, ip:10.235.172.15, email:kyosold@sina.cn, ret:0 [smAuthInfo_V1():386]
+May 31 10:39:44 mailadmin-2-216 libsinamail.ldap[31766]: [info] Auth successful, ip:10.235.172.15, email:kyosold@sina.cn, actual email:kyosold@sina.cn [smAuthInfo_V1():412]
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_check_auth_login ICID:6476B37000007C16 ret:[0] sinamailAuthByMail("kyosold@sina.cn", "*", &base_info, 10.235.172.15, &uid, &status), uid[-1] status[-1] ulUserStat[2592]
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_check_auth_login ICID:6476B37000007C16 user[kyosold@sina.cn] is not mobile email
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_auth ICID:6476B37000007C16 Success user:kyosold@sina.cn, type:LOGIN
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_mail ICID:6476B37000007C16 [from]:FROM:<kyosold@sina.cn>
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] sender_limit_find ICID:6476B37000007C16 from:kyosold@sina.cn score:80.000000 in group:default
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] limit_from_check ICID:6476B37000007C16 from:kyosold@sina.cn state:0 unlock time:0
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_rcpt ICID:6476B37000007C16 [rcpt]:TO:<songjian@gpkeys.com>
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_rcpt ICID:6476B37000007C16 ===LOG_SEARCH=== [ICID] from:kyosold@sina.cn to:songjian@gpkeys.com
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_rcpt ICID:6476B37000007C16 ==KF_LOG== smtpd session:8B2ADBBE4E13409D8DDBFBC955D6B6D6 from:kyosold@sina.cn to:songjian@gpkeys.com
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] limit_host_inc ICID:6476B37000007C16 current minute idx:12 sum:1 err:0 count sum:5 err:0
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_rcpt ICID:6476B37000007C16 from:kyosold@sina.cn, to:songjian@gpkeys.com
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_rcpt ICID:6476B37000007C16 [rcpt]:TO:<dev@gpkeys.com>
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_rcpt ICID:6476B37000007C16 ===LOG_SEARCH=== [ICID] from:kyosold@sina.cn to:dev@gpkeys.com
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_rcpt ICID:6476B37000007C16 ==KF_LOG== smtpd session:8B2ADBBE4E13409D8DDBFBC955D6B6D6 from:kyosold@sina.cn to:dev@gpkeys.com
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] limit_host_inc ICID:6476B37000007C16 current minute idx:12 sum:2 err:0 count sum:6 err:0
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_rcpt ICID:6476B37000007C16 from:kyosold@sina.cn, to:dev@gpkeys.com
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_rcpt ICID:6476B37000007C16 [rcpt]:TO:<pro@gpkeys.com>
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_rcpt ICID:6476B37000007C16 ===LOG_SEARCH=== [ICID] from:kyosold@sina.cn to:pro@gpkeys.com
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_rcpt ICID:6476B37000007C16 ==KF_LOG== smtpd session:8B2ADBBE4E13409D8DDBFBC955D6B6D6 from:kyosold@sina.cn to:pro@gpkeys.com
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] limit_host_inc ICID:6476B37000007C16 current minute idx:12 sum:3 err:0 count sum:7 err:0
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_rcpt ICID:6476B37000007C16 from:kyosold@sina.cn, to:pro@gpkeys.com
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_data ICID:6476B37000007C16 [data] from:kyosold@sina.cn, to:songjian@gpkeys.com,dev@gpkeys.com,pro@gpkeys.com,
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] limit_to_checklock ICID:6476B37000007C16 cache no found limit from:kyosold@sina.cn
+May 31 10:39:44 mailadmin-2-216 qmail-smtpd[31766]: [INFO] limit_to_check ICID:6476B37000007C16 from:kyosold@sina.cn, max_to_day:95 mcvalue:4, rctpok:3
+May 31 10:39:45 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_data ICID:6476B37000007C16 head exist_smail_uiid: 
+May 31 10:39:45 mailadmin-2-216 qmail-smtpd[31766]: [INFO] limit_from_inc ICID:6476B37000007C16 from:kyosold@sina.cn, ok:3, err:0
+May 31 10:39:45 mailadmin-2-216 qmail-smtpd[31766]: [INFO] limit_from_inc ICID:6476B37000007C16 kyosold@sina.cn curr rcpt sum:3 err:0 all sum:7, max 5min sum:25 1hour sum:45
+May 31 10:39:45 mailadmin-2-216 qmail-smtpd[31766]: [INFO] limit_from_inc ICID:6476B37000007C16 from:kyosold@sina.cn 5min:3 1hour:7
+May 31 10:39:45 mailadmin-2-216 qmail-smtpd[31766]: [INFO] is_client_connected ICID:6476B37000007C16 client is connected
+May 31 10:39:45 mailadmin-2-216 qmail-smtpd[31766]: [INFO] exec_spamfilter ICID:6476B37000007C16 Exec:[spam_filter/spam_filter -b/var/qmail/queue/pid/168550078531766000 -r10.235.172.15 -p49574 -fkyosold@sina.cn -n3 -tsongjian@gpkeys.com,dev@gpkeys.com,pro@gpkeys.com -cspam_filter/spam_cond.ini -dspam_filter/spam_dict -i10150262446 -I6476B37000007C16 -PRELAYLIST -akyosold@sina.cn -D1 -K2 ]
+May 31 10:39:45 mailadmin-2-216 qmail-smtpd[31766]: [INFO] exec_spamfilter ICID:6476B37000007C16 ===LOG_SEARCH=== [Launch] ICID:6476B37000007C16 MID:10150262446 IP:10.235.172.15 Sender:kyosold@sina.cn From:kyosold@sina.cn To:songjian@gpkeys.com,dev@gpkeys.com,pro@gpkeys.com
+May 31 10:39:45 mailadmin-2-216 qmail-smtpd[31766]: [INFO] exec_spamfilter ICID:6476B37000007C16 ==KF_LOG== run session:8B2ADBBE4E13409D8DDBFBC955D6B6D6 MID:10150262446 R:10.235.172.15 S:kyosold@sina.cn F:kyosold@sina.cn T:songjian@gpkeys.com,dev@gpkeys.com,pro@gpkeys.com
+May 31 10:39:45 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_data ICID:6476B37000007C16 MID:10150262446 from:kyosold@sina.cn to:songjian@gpkeys.com,dev@gpkeys.com,pro@gpkeys.com size:48282
+May 31 10:39:45 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_quit ICID:6476B37000007C16 [quit]:
+May 31 10:39:45 mailadmin-2-216 qmail-smtpd[31766]: [INFO] smtp_quit ICID:6476B37000007C16 [SESSION END] client:(10.235.172.15).
+May 31 10:39:45 mailadmin-2-216 tcpserver[31676]: [INFO] client_offline child exit pid:31766 ip:10.235.172.15 connect:0/2000
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 IPGROUP:RELAYLIST 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 morethen_nofilter=[20M] 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 start init_parse_mail_fd 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 mail header from:kyosold@sina.cn 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 ===LOG_SEARCH=== [HEADER] ICID:6476B37000007C16 MID:10150262446 HeadFrom:kyosold@sina.cn Subject:Genuine HP parts now available 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 mail header to:songjian@gpkeys.com 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 mail header cc:(null) 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 mail header bcc:(null) 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 IPGROUP:RELAYLIST 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 pro condition_0[sj] mailsize ret[1]:SIZE > 0 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 final condition_0[sj] res[1] env_from[kyosold@sina.cn], so ready action[SPAM_SKIP] 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 ===LOG_SEARCH=== [CONDITION] ICID:6476B37000007C16 MID:10150262446 res:1 condition:condition_0 name:sj env_from:kyosold@sina.cn action:SPAM_SKIP 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 ===LOG_SEARCH=== [FILTER] Filter_True:1 ICID:6476B37000007C16 MID:10150262446 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 log_headers[Subject: Genuine HP parts now available] filter_true:1 cip:10.235.172.15 envfrom:kyosold@sina.cn envto:songjian@gpkeys.com 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 condition=[condition_0] ACTION=[SPAM_SKIP], no filter, send mail 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 ==KF_LOG== 10150262446 condition_0 SKIP 10.235.172.15 kyosold@sina.cn Genuine HP parts now available 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 ==SENTSAVESTATUS== 1DFA128413A1409B9FF326B90583C22C-20230531-103945 condition_0 SKIP 10.235.172.15 kyosold@sina.cn Genuine HP parts now available 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 PUBLIC_SECURITY | 10.235.172.15 | 49574 | kyosold@sina.cn | songjian@gpkeys.com,dev@gpkeys.com,pro@gpkeys.com, | Genuine HP parts now available | 48804 | 10.69.2.216 | 0 |  
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 send to:[songjian@gpkeys.com] 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 send to:[dev@gpkeys.com] 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 send to:[pro@gpkeys.com] 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 send fde to[Tsongjian@gpkeys.com] 
+May 31 10:39:45 mailadmin-2-216 qmail-queue[31769]: [INFO] received_setup SJ: received:Received: (qmail 31769 invoked by uid 1020); 31 May 2023 10:39:45 +0800 (CST)
+May 31 10:39:45 mailadmin-2-216 qmail-queue[31769]: [INFO] main into the fast delivery
+May 31 10:39:45 mailadmin-2-216 qmail-queue[31769]: [INFO] main arg2=[/var/qmail/queue/pid/168550078531766000]
+May 31 10:39:45 mailadmin-2-216 qmail-queue[31769]: [INFO] main MAIL INO [10150262446] => [10150262446], messfn:[mess/12/10150262446] todofn:[todo/10150262446] intdfn:[intd/10150262446]
+May 31 10:39:45 mailadmin-2-216 qmail-queue[31769]: [INFO] main 10150262446 call triggerpull succ
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] todo_do new msg:10150262446
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] todo_do info msg:10150262446 size:48804 from:<kyosold@sina.cn> pq:31769 uid:1020
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 succ unlink file[/var/qmail/queue/pid/168550078531766000] 
+May 31 10:39:45 mailadmin-2-216 spam_filter[31768]: [INFO] 6476B37000007C16 10150262446 250 ok 31768 
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] del_start starting delivery num:0 id:[9] msg:10150262446 to remote songjian@gpkeys.com
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 1/3000 
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] del_start starting delivery num:1 id:[10] msg:10150262446 to remote dev@gpkeys.com
+May 31 10:39:45 mailadmin-2-216 qmail-rspawn[31716]: [INFO] getcmd ICID:[6476B37000007C16] MID:[10150262446] local_bind:[null] relay:[] from:[kyosold@sina.cn] to:[songjian@gpkeys.com]
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 2/3000 
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] del_start starting delivery num:2 id:[11] msg:10150262446 to remote pro@gpkeys.com
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 3/3000 
+May 31 10:39:45 mailadmin-2-216 qmail-rspawn[31716]: [INFO] getcmd ICID:[6476B37000007C16] MID:[10150262446] local_bind:[null] relay:[] from:[kyosold@sina.cn] to:[dev@gpkeys.com]
+May 31 10:39:45 mailadmin-2-216 qmail-rspawn[31716]: [INFO] getcmd ICID:[6476B37000007C16] MID:[10150262446] local_bind:[null] relay:[] from:[kyosold@sina.cn] to:[pro@gpkeys.com]
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: [INFO] main ICID:6476B37000007C16 MID:10150262446 args: local_bind:[null] relayhost:[] mail_from:[kyosold@sina.cn] mail_to:[songjian@gpkeys.com] msg_id:[10150262446] conn_id:[6476B37000007C16] smail_uiid:[1DFA128413A1409B9FF326B90583C22C-20230531-103945]
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: [INFO] main ICID:6476B37000007C16 MID:10150262446 ===LOG_SEARCH=== [StartRemote] from:kyosold@sina.cn to:songjian@gpkeys.com relay:null bind:
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: [INFO] main ICID:6476B37000007C16 MID:10150262446 args: local_bind:[null] relayhost:[] mail_from:[kyosold@sina.cn] mail_to:[dev@gpkeys.com] msg_id:[10150262446] conn_id:[6476B37000007C16] smail_uiid:[1DFA128413A1409B9FF326B90583C22C-20230531-103945]
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: [INFO] main ICID:6476B37000007C16 MID:10150262446 ===LOG_SEARCH=== [StartRemote] from:kyosold@sina.cn to:dev@gpkeys.com relay:null bind:
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: [INFO] main ICID:6476B37000007C16 MID:10150262446 args: local_bind:[null] relayhost:[] mail_from:[kyosold@sina.cn] mail_to:[pro@gpkeys.com] msg_id:[10150262446] conn_id:[6476B37000007C16] smail_uiid:[1DFA128413A1409B9FF326B90583C22C-20230531-103945]
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: [INFO] main ICID:6476B37000007C16 MID:10150262446 ===LOG_SEARCH=== [StartRemote] from:kyosold@sina.cn to:pro@gpkeys.com relay:null bind:
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: [INFO] bind_addr_find bind ip use:10.69.2.216 
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: [INFO] main ICID:6476B37000007C16 MID:10150262446 set helo name:smtp-2-32.mail.sina.com.cn
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: [INFO] bind_addr_find bind ip use:10.69.2.216 
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: [INFO] main ICID:6476B37000007C16 MID:10150262446 set helo name:smtp-2-32.mail.sina.com.cn
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: [INFO] main ICID:6476B37000007C16 MID:10150262446 connect host:(49.7.36.231:25) is outer net, bind local ip:(10.69.2.216) heloname:smtp-2-32.mail.sina.com.cn 
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: [INFO] bind_addr_find bind ip use:10.69.2.216 
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: [INFO] main ICID:6476B37000007C16 MID:10150262446 set helo name:smtp-2-32.mail.sina.com.cn
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: [INFO] main ICID:6476B37000007C16 MID:10150262446 connect host:(49.7.36.231:25) is outer net, bind local ip:(10.69.2.216) heloname:smtp-2-32.mail.sina.com.cn 
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: [INFO] smtp ICID:6476B37000007C16 MID:10150262446 connect remote:(49.7.36.231) succcess, Time:1685500785.114531 recv:220 mx-13-26.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: [INFO] smtp ICID:6476B37000007C16 MID:10150262446 ==LOG_SEARCH=== [GREETING] remote:49.7.36.231 recv:220 mx-13-26.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: [INFO] smtp ICID:6476B37000007C16 MID:10150262446 ==KF_LOG== remote c:49.7.36.231 recv:220 mx-13-26.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: [INFO] smtp ICID:6476B37000007C16 MID:10150262446 connect remote:(49.7.36.231) succcess, Time:1685500785.118531 recv:220 mx-13-27.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: [INFO] smtp ICID:6476B37000007C16 MID:10150262446 ==LOG_SEARCH=== [GREETING] remote:49.7.36.231 recv:220 mx-13-27.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: [INFO] smtp ICID:6476B37000007C16 MID:10150262446 ==KF_LOG== remote c:49.7.36.231 recv:220 mx-13-27.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: [INFO] blast ICID:6476B37000007C16 MID:10150262446 message head length:1406
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: [INFO] blast ICID:6476B37000007C16 MID:10150262446 message head length:1406
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: [INFO] quit ICID:6476B37000007C16 MID:10150262446 Time:1685500785.161198 from:[kyosold@sina.cn] to:[pro@gpkeys.com] bindip:[10.69.2.216] host:[49.7.36.231:25] result:[K] msg:[250 ok queue id 640F0DE38B0B46BBA8879D6C0B05C83F]
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: [INFO] quit ICID:6476B37000007C16 MID:10150262446 ===LOG_SEARCH=== [REMOTE] from:kyosold@sina.cn to:pro@gpkeys.com bindip:10.69.2.216 host:49.7.36.231:25 result:K msg:250 ok queue id 640F0DE38B0B46BBA8879D6C0B05C83F
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: [INFO] quit ICID:6476B37000007C16 MID:10150262446 ==KF_LOG== quit f:kyosold@sina.cn t:pro@gpkeys.com b:10.69.2.216 h:49.7.36.231:25 res:K msg:250 ok queue id 640F0DE38B0B46BBA8879D6C0B05C83F
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31772]: ==SENTSAVESTATUS== [INFO] quit M:10150262446 XSID:1DFA128413A1409B9FF326B90583C22C-20230531-103945 Time:1685500785.161198 from:[kyosold@sina.cn] to:[pro@gpkeys.com] bindip:[10.69.2.216] host:[49.7.36.231:25] result:[K] msg:[250 ok queue id 640F0DE38B0B46BBA8879D6C0B05C83F]
+May 31 10:39:45 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B37000007C16 10150262446 EPOLLIN fd:8 events:1
+May 31 10:39:45 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B37000007C16 10150262446 EPOLLHUP fd:8 events:16
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] del_dochan delivery num:2 id:11 MID:10150262446 to:pro@gpkeys.com success
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 2/3000 
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: [INFO] quit ICID:6476B37000007C16 MID:10150262446 Time:1685500785.166120 from:[kyosold@sina.cn] to:[dev@gpkeys.com] bindip:[10.69.2.216] host:[49.7.36.231:25] result:[K] msg:[250 ok queue id E8979F88AC0B4DE59F7A73926147A883]
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: [INFO] quit ICID:6476B37000007C16 MID:10150262446 ===LOG_SEARCH=== [REMOTE] from:kyosold@sina.cn to:dev@gpkeys.com bindip:10.69.2.216 host:49.7.36.231:25 result:K msg:250 ok queue id E8979F88AC0B4DE59F7A73926147A883
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: [INFO] quit ICID:6476B37000007C16 MID:10150262446 ==KF_LOG== quit f:kyosold@sina.cn t:dev@gpkeys.com b:10.69.2.216 h:49.7.36.231:25 res:K msg:250 ok queue id E8979F88AC0B4DE59F7A73926147A883
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31771]: ==SENTSAVESTATUS== [INFO] quit M:10150262446 XSID:1DFA128413A1409B9FF326B90583C22C-20230531-103945 Time:1685500785.166120 from:[kyosold@sina.cn] to:[dev@gpkeys.com] bindip:[10.69.2.216] host:[49.7.36.231:25] result:[K] msg:[250 ok queue id E8979F88AC0B4DE59F7A73926147A883]
+May 31 10:39:45 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B37000007C16 10150262446 EPOLLIN fd:6 events:1
+May 31 10:39:45 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B37000007C16 10150262446 EPOLLHUP fd:6 events:16
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] del_dochan delivery num:1 id:10 MID:10150262446 to:dev@gpkeys.com success
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 1/3000 
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: [INFO] main ICID:6476B37000007C16 MID:10150262446 connect host:(49.7.36.231:25) is outer net, bind local ip:(10.69.2.216) heloname:smtp-2-32.mail.sina.com.cn 
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: [INFO] smtp ICID:6476B37000007C16 MID:10150262446 connect remote:(49.7.36.231) succcess, Time:1685500785.287121 recv:220 mx-13-26.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: [INFO] smtp ICID:6476B37000007C16 MID:10150262446 ==LOG_SEARCH=== [GREETING] remote:49.7.36.231 recv:220 mx-13-26.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: [INFO] smtp ICID:6476B37000007C16 MID:10150262446 ==KF_LOG== remote c:49.7.36.231 recv:220 mx-13-26.mxsmail.email.yf.sinanode.com ESMTP
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: [INFO] blast ICID:6476B37000007C16 MID:10150262446 message head length:1406
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: [INFO] quit ICID:6476B37000007C16 MID:10150262446 Time:1685500785.329450 from:[kyosold@sina.cn] to:[songjian@gpkeys.com] bindip:[10.69.2.216] host:[49.7.36.231:25] result:[K] msg:[250 ok queue id 0500AF88EAB4443CAD05935A92ED48A4]
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: [INFO] quit ICID:6476B37000007C16 MID:10150262446 ===LOG_SEARCH=== [REMOTE] from:kyosold@sina.cn to:songjian@gpkeys.com bindip:10.69.2.216 host:49.7.36.231:25 result:K msg:250 ok queue id 0500AF88EAB4443CAD05935A92ED48A4
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: [INFO] quit ICID:6476B37000007C16 MID:10150262446 ==KF_LOG== quit f:kyosold@sina.cn t:songjian@gpkeys.com b:10.69.2.216 h:49.7.36.231:25 res:K msg:250 ok queue id 0500AF88EAB4443CAD05935A92ED48A4
+May 31 10:39:45 mailadmin-2-216 qmail-remote[31770]: ==SENTSAVESTATUS== [INFO] quit M:10150262446 XSID:1DFA128413A1409B9FF326B90583C22C-20230531-103945 Time:1685500785.329450 from:[kyosold@sina.cn] to:[songjian@gpkeys.com] bindip:[10.69.2.216] host:[49.7.36.231:25] result:[K] msg:[250 ok queue id 0500AF88EAB4443CAD05935A92ED48A4]
+May 31 10:39:45 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B37000007C16 10150262446 EPOLLIN fd:4 events:1
+May 31 10:39:45 mailadmin-2-216 qmail-rspawn[31716]: [INFO] main 6476B37000007C16 10150262446 EPOLLHUP fd:4 events:16
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] del_dochan delivery num:0 id:9 MID:10150262446 to:songjian@gpkeys.com success
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] del_status status: local 0/100  remote 0/3000 
+May 31 10:39:45 mailadmin-2-216 qmail-send[31681]: [INFO] messdone end msg:10150262446
+May 31 10:44:23 mailadmin-2-216 tcpserver[31676]: [INFO] client_online child pid:32224 ip:10.235.172.15 connect:1/2000
+May 31 10:44:23 mailadmin-2-216 tcpserver[32224]: [INFO] child_init ICID:6476B48700007DE0 connect Time:1685501063.066021
+May 31 10:44:23 mailadmin-2-216 tcpserver[32224]: [INFO] is_ip_in_super_blacklist ICID:6476B48700007DE0 super_black_ip(/var/qmail/control/super_black_ip) is exists and is readable
+May 31 10:44:23 mailadmin-2-216 tcpserver[32224]: [INFO] ipgroup_find ICID:6476B48700007DE0 group:RELAYLIST, policy:SMTPAUTH
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] main ICID:6476B48700007DE0 [SESSION BEGIN] client:(10.235.172.15) Time:1685501063.085364 IPGroup:RELAYLIST domain:unknown
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_ehlo ICID:6476B48700007DE0 [ehlo]:GraysondeMacBook-Pro.local
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] dohelo ICID:6476B48700007DE0 helohost:GraysondeMacBook-Pro.local
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_auth ICID:6476B48700007DE0 [auth]:LOGIN
+May 31 10:44:23 mailadmin-2-216 libsinamail.ldap[32224]: [info] limit : mc_get() in white, key:auth_10.235.172.15_kyosold@sina.cn [white_check():705]
+May 31 10:44:23 mailadmin-2-216 libsinamail.ldap[32224]: [info] auth by sso cache ok, ip:10.235.172.15, email:kyosold@sina.cn [smAuthBySSO_EX():399]
+May 31 10:44:23 mailadmin-2-216 libsinamail.ldap[32224]: [info] auth by sso, ip:10.235.172.15, email:kyosold@sina.cn, ret:0 [smAuthInfo_V1():386]
+May 31 10:44:23 mailadmin-2-216 libsinamail.ldap[32224]: [info] Auth successful, ip:10.235.172.15, email:kyosold@sina.cn, actual email:kyosold@sina.cn [smAuthInfo_V1():412]
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_check_auth_login ICID:6476B48700007DE0 ret:[0] sinamailAuthByMail("kyosold@sina.cn", "*", &base_info, 10.235.172.15, &uid, &status), uid[-1] status[-1] ulUserStat[2592]
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_check_auth_login ICID:6476B48700007DE0 user[kyosold@sina.cn] is not mobile email
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_auth ICID:6476B48700007DE0 Success user:kyosold@sina.cn, type:LOGIN
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_mail ICID:6476B48700007DE0 [from]:FROM:<kyosold@sina.cn>
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] sender_limit_find ICID:6476B48700007DE0 from:kyosold@sina.cn score:80.000000 in group:default
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] limit_from_check ICID:6476B48700007DE0 from:kyosold@sina.cn state:0 unlock time:0
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_rcpt ICID:6476B48700007DE0 [rcpt]:TO:<kyosold@qq.com>
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_rcpt ICID:6476B48700007DE0 ===LOG_SEARCH=== [ICID] from:kyosold@sina.cn to:kyosold@qq.com
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_rcpt ICID:6476B48700007DE0 ==KF_LOG== smtpd session:76BFC7C6A06A47F9BC5CFDC46D67E76F from:kyosold@sina.cn to:kyosold@qq.com
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] limit_host_inc ICID:6476B48700007DE0 current minute idx:17 sum:1 err:0 count sum:8 err:0
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_rcpt ICID:6476B48700007DE0 from:kyosold@sina.cn, to:kyosold@qq.com
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_data ICID:6476B48700007DE0 [data] from:kyosold@sina.cn, to:kyosold@qq.com,
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] limit_to_checklock ICID:6476B48700007DE0 cache no found limit from:kyosold@sina.cn
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] limit_to_check ICID:6476B48700007DE0 from:kyosold@sina.cn, max_to_day:95 mcvalue:7, rctpok:1
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_data ICID:6476B48700007DE0 head exist_smail_uiid: 
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] limit_from_inc ICID:6476B48700007DE0 from:kyosold@sina.cn, ok:1, err:0
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] limit_from_inc ICID:6476B48700007DE0 kyosold@sina.cn curr rcpt sum:1 err:0 all sum:8, max 5min sum:25 1hour sum:45
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] limit_from_inc ICID:6476B48700007DE0 from:kyosold@sina.cn 5min:1 1hour:8
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] is_client_connected ICID:6476B48700007DE0 client is connected
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] exec_spamfilter ICID:6476B48700007DE0 Exec:[spam_filter/spam_filter -b/var/qmail/queue/pid/168550106332224000 -r10.235.172.15 -p49998 -fkyosold@sina.cn -n1 -tkyosold@qq.com -cspam_filter/spam_cond.ini -dspam_filter/spam_dict -i158049262446 -I6476B48700007DE0 -PRELAYLIST -akyosold@sina.cn -D1 -K2 ]
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] exec_spamfilter ICID:6476B48700007DE0 ===LOG_SEARCH=== [Launch] ICID:6476B48700007DE0 MID:158049262446 IP:10.235.172.15 Sender:kyosold@sina.cn From:kyosold@sina.cn To:kyosold@qq.com
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] exec_spamfilter ICID:6476B48700007DE0 ==KF_LOG== run session:76BFC7C6A06A47F9BC5CFDC46D67E76F MID:158049262446 R:10.235.172.15 S:kyosold@sina.cn F:kyosold@sina.cn T:kyosold@qq.com
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_data ICID:6476B48700007DE0 MID:158049262446 from:kyosold@sina.cn to:kyosold@qq.com size:48239
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 IPGROUP:RELAYLIST 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 morethen_nofilter=[20M] 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 start init_parse_mail_fd 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 mail header from:kyosold@sina.cn 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 ===LOG_SEARCH=== [HEADER] ICID:6476B48700007DE0 MID:158049262446 HeadFrom:kyosold@sina.cn Subject:Genuine HP parts now available 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 mail header to:kyosold@qq.com 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 mail header cc:(null) 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 mail header bcc:(null) 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 IPGROUP:RELAYLIST 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 pro condition_0[sj] mailsize ret[1]:SIZE > 0 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 final condition_0[sj] res[1] env_from[kyosold@sina.cn], so ready action[SPAM_DROP] 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 ===LOG_SEARCH=== [CONDITION] ICID:6476B48700007DE0 MID:158049262446 res:1 condition:condition_0 name:sj env_from:kyosold@sina.cn action:SPAM_DROP 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 ===LOG_SEARCH=== [FILTER] Filter_True:1 ICID:6476B48700007DE0 MID:158049262446 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 log_headers[Subject: Genuine HP parts now available] filter_true:1 cip:10.235.172.15 envfrom:kyosold@sina.cn envto:kyosold@qq.com 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 ==KF_LOG== 158049262446 condition_0 DROP 10.235.172.15 kyosold@sina.cn Genuine HP parts now available 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 ==SENTSAVESTATUS== 8F9FB02F9A9548EF997609291D769B4C-20230531-104423 condition_0 DROP 10.235.172.15 kyosold@sina.cn Genuine HP parts now available 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 condition=[condition_0] ACTION=[SPAM_DROP], the mail will be drop 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 succ unlink file[/var/qmail/queue/pid/168550106332224000] 
+May 31 10:44:23 mailadmin-2-216 spam_filter[32226]: [INFO] 6476B48700007DE0 158049262446 250 ok 32226 
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_quit ICID:6476B48700007DE0 [quit]:
+May 31 10:44:23 mailadmin-2-216 qmail-smtpd[32224]: [INFO] smtp_quit ICID:6476B48700007DE0 [SESSION END] client:(10.235.172.15).
+May 31 10:44:23 mailadmin-2-216 tcpserver[31676]: [INFO] client_offline child exit pid:32224 ip:10.235.172.15 connect:0/2000
+May 31 14:09:39 mailadmin-2-216 tcpserver[31676]: [INFO] client_online child pid:25467 ip:10.235.172.15 connect:1/2000
+May 31 14:09:39 mailadmin-2-216 tcpserver[25467]: [INFO] child_init ICID:6476E4A30000637B connect Time:1685513379.084638
+May 31 14:09:39 mailadmin-2-216 tcpserver[25467]: [INFO] is_ip_in_super_blacklist ICID:6476E4A30000637B super_black_ip(/var/qmail/control/super_black_ip) is exists and is readable
+May 31 14:09:39 mailadmin-2-216 tcpserver[25467]: [INFO] ipgroup_find ICID:6476E4A30000637B group:RELAYLIST, policy:SMTPAUTH
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] limit_host_check ICID:6476E4A30000637B cache no found limit ip:10.235.172.15 mckey:I_aebac0f
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] main ICID:6476E4A30000637B [SESSION BEGIN] client:(10.235.172.15) Time:1685513379.102004 IPGroup:RELAYLIST domain:unknown
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_ehlo ICID:6476E4A30000637B [ehlo]:GraysondeMacBook-Pro.local
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] dohelo ICID:6476E4A30000637B helohost:GraysondeMacBook-Pro.local
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_auth ICID:6476E4A30000637B [auth]:LOGIN
+May 31 14:09:39 mailadmin-2-216 libsinamail.ldap[25467]: [info] limit : mc_get() in white, key:auth_10.235.172.15_kyosold@sina.cn [white_check():705]
+May 31 14:09:39 mailadmin-2-216 libsinamail.ldap[25467]: [info] invoke checksso [smAuthBySSO():353]
+May 31 14:09:39 mailadmin-2-216 libsinamail.ldap[25467]: [info] auth cache set, ip:10.235.172.15, email:kyosold@sina.cn [smAuthBySSO_EX():409]
+May 31 14:09:39 mailadmin-2-216 libsinamail.ldap[25467]: [info] auth by sso, ip:10.235.172.15, email:kyosold@sina.cn, ret:0 [smAuthInfo_V1():386]
+May 31 14:09:39 mailadmin-2-216 libsinamail.ldap[25467]: [info] Auth successful, ip:10.235.172.15, email:kyosold@sina.cn, actual email:kyosold@sina.cn [smAuthInfo_V1():412]
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_check_auth_login ICID:6476E4A30000637B ret:[0] sinamailAuthByMail("kyosold@sina.cn", "*", &base_info, 10.235.172.15, &uid, &status), uid[1627185190] status[0] ulUserStat[2592]
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_check_auth_login ICID:6476E4A30000637B user[kyosold@sina.cn] is not mobile email
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_auth ICID:6476E4A30000637B Success user:kyosold@sina.cn, type:LOGIN
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_mail ICID:6476E4A30000637B [from]:FROM:<kyosold@sina.cn>
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] sender_limit_find ICID:6476E4A30000637B from:kyosold@sina.cn score:80.000000 in group:default
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] limit_from_check ICID:6476E4A30000637B cache no found limit from:kyosold@sina.cn
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_rcpt ICID:6476E4A30000637B [rcpt]:TO:<kyosold@sina.com>
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_rcpt ICID:6476E4A30000637B ===LOG_SEARCH=== [ICID] from:kyosold@sina.cn to:kyosold@sina.com
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_rcpt ICID:6476E4A30000637B ==KF_LOG== smtpd session:9212591C55714CF48A7C94DCF5207C35 from:kyosold@sina.cn to:kyosold@sina.com
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] limit_host_inc ICID:6476E4A30000637B cache no found limit ip:10.235.172.15 mckey:I_aebac0f
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_rcpt ICID:6476E4A30000637B from:kyosold@sina.cn, to:kyosold@sina.com
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_data ICID:6476E4A30000637B [data] from:kyosold@sina.cn, to:kyosold@sina.com,
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] limit_to_checklock ICID:6476E4A30000637B cache no found limit from:kyosold@sina.cn
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] limit_to_check ICID:6476E4A30000637B from:kyosold@sina.cn, max_to_day:95 mcvalue:8, rctpok:1
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_data ICID:6476E4A30000637B head exist_smail_uiid: 
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] limit_from_inc ICID:6476E4A30000637B from:kyosold@sina.cn, ok:1, err:0
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] limit_from_inc ICID:6476E4A30000637B cache no found limit from:kyosold@sina.cn
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] limit_from_inc ICID:6476E4A30000637B kyosold@sina.cn curr rcpt sum:1 err:0 all sum:1, max 5min sum:25 1hour sum:45
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] limit_from_inc ICID:6476E4A30000637B from:kyosold@sina.cn 5min:1 1hour:1
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] is_client_connected ICID:6476E4A30000637B client is connected
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] exec_spamfilter ICID:6476E4A30000637B Exec:[spam_filter/spam_filter -b/var/qmail/queue/pid/168551337925467000 -r10.235.172.15 -p61425 -fkyosold@sina.cn -n1 -tkyosold@sina.com -cspam_filter/spam_cond.ini -dspam_filter/spam_dict -i238554262446 -I6476E4A30000637B -PRELAYLIST -akyosold@sina.cn -D1 -K2 ]
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] exec_spamfilter ICID:6476E4A30000637B ===LOG_SEARCH=== [Launch] ICID:6476E4A30000637B MID:238554262446 IP:10.235.172.15 Sender:kyosold@sina.cn From:kyosold@sina.cn To:kyosold@sina.com
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] exec_spamfilter ICID:6476E4A30000637B ==KF_LOG== run session:9212591C55714CF48A7C94DCF5207C35 MID:238554262446 R:10.235.172.15 S:kyosold@sina.cn F:kyosold@sina.cn T:kyosold@sina.com
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_data ICID:6476E4A30000637B MID:238554262446 from:kyosold@sina.cn to:kyosold@sina.com size:48241
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 IPGROUP:RELAYLIST 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 morethen_nofilter=[20M] 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 start init_parse_mail_fd 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 mail header from:kyosold@sina.cn 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 ===LOG_SEARCH=== [HEADER] ICID:6476E4A30000637B MID:238554262446 HeadFrom:kyosold@sina.cn Subject:Genuine HP parts now available 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 mail header to:kyosold@sina.com 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 mail header cc:(null) 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 mail header bcc:(null) 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 IPGROUP:RELAYLIST 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 pro condition_0[sj] mailsize ret[1]:SIZE > 0 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 final condition_0[sj] res[1] env_from[kyosold@sina.cn], so ready action[SPAM_DROP] 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 ===LOG_SEARCH=== [CONDITION] ICID:6476E4A30000637B MID:238554262446 res:1 condition:condition_0 name:sj env_from:kyosold@sina.cn action:SPAM_DROP 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 ===LOG_SEARCH=== [FILTER] Filter_True:1 ICID:6476E4A30000637B MID:238554262446 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 log_headers[Subject: Genuine HP parts now available] filter_true:1 cip:10.235.172.15 envfrom:kyosold@sina.cn envto:kyosold@sina.com 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 ==KF_LOG== 238554262446 condition_0 DROP 10.235.172.15 kyosold@sina.cn Genuine HP parts now available 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 ==SENTSAVESTATUS== 0C01E3227F39480E90D88AF095100167-20230531-140939 condition_0 DROP 10.235.172.15 kyosold@sina.cn Genuine HP parts now available 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 condition=[condition_0] ACTION=[SPAM_DROP], the mail will be drop 
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_quit ICID:6476E4A30000637B [quit]:
+May 31 14:09:39 mailadmin-2-216 qmail-smtpd[25467]: [INFO] smtp_quit ICID:6476E4A30000637B [SESSION END] client:(10.235.172.15).
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 succ unlink file[/var/qmail/queue/pid/168551337925467000] 
+May 31 14:09:39 mailadmin-2-216 spam_filter[25470]: [INFO] 6476E4A30000637B 238554262446 250 ok 25470 
+May 31 14:09:39 mailadmin-2-216 tcpserver[31676]: [INFO] client_offline child exit pid:25467 ip:10.235.172.15 connect:0/2000

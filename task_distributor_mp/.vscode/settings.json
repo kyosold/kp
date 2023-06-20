@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.tpl": "php",
+        "stat.h": "c",
+        "fcntl.h": "c"
+    }
+}
