@@ -11,7 +11,7 @@
 #include <time.h>
 #include "kutils.h"
 
-#define VERSION "1.0"
+#define VERSION "1.1"
 
 #define COLOR_NONE "\033[0m"
 #define COLOR_RED "\033[1;31;40m"
@@ -291,7 +291,7 @@ KGREP_FAIL:
 
 KGREP_SUCC:
     fclose(fp);
-    return fpos->pos;
+    return 0;
 }
 
 int get_end_pos(matcher *ma, found_pos *fpos)
@@ -474,7 +474,7 @@ KGREP_FAIL:
 
 KGREP_SUCC:
     fclose(fp);
-    return fpos->pos;
+    return 0;
 }
 
 void kgrep_str(matcher *ma, char *buf)
@@ -557,14 +557,15 @@ void doit(matcher *ma)
     char *line_end = NULL;
     int len = 0;
     int buf_alloc = sizeof(buf);
-    unsigned long long total_bytes = (spos.pos - epos.pos);
+    unsigned long long total_bytes = (epos.pos - spos.pos);
 
     while (total_bytes > 0) {
         if (total_bytes < buf_alloc)
             buf_alloc = total_bytes;
 
-        ssize_t n = read(fd, pbuf + len, buf_alloc);
-        if (n < 0) {
+        ssize_t n = read(fd, pbuf + len, buf_alloc - len);
+        if (n < 0)
+        {
             printf("Error: read file(%s) fail:%s\n", ma->filename, strerror(errno));
             close(fd);
             return;
@@ -575,20 +576,14 @@ void doit(matcher *ma)
             return;
         }
 
+        *(pbuf + len + n) = '\0';
         total_bytes -= n;
+
         if (len == 0) {
-            line_buf = memchr(pbuf, eol_byte, n);
-            if (line_buf) {
-                line_buf++;
-                int m = line_buf - pbuf;
-                n -= m;
-            } else {
-                printf("Error: buffer size is small, it isn't include \\n at buffer, (you should incr buffer size)\n");
-                goto KGREP_ERROR;
-            }
+            line_buf = pbuf;
         } else {
-            line_buf = buf;
-            n += len;
+            line_buf = pbuf - len;
+            n = len + n;
         }
 
         if (line_buf) {
