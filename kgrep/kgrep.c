@@ -11,7 +11,7 @@
 #include <time.h>
 #include "kutils.h"
 
-#define VERSION "1.1"
+#define VERSION "1.2.2"
 
 #define COLOR_NONE "\033[0m"
 #define COLOR_RED "\033[1;31;40m"
@@ -27,6 +27,7 @@ typedef struct matcher_st
     unsigned long long min_size;
     int icase;
     int verbose;
+    int debug;
     char pattern[4096];
     char filename[4096];
 } matcher;
@@ -479,6 +480,10 @@ KGREP_SUCC:
 
 void kgrep_str(matcher *ma, char *buf)
 {
+    if (ma->debug) {
+        printf("DEBUG: pattern[%s] buf:%s", ma->pattern, buf);
+    }
+
     char *pos = NULL;
     if (ma->icase) {
         pos = (char *)strcasestr(buf, ma->pattern);
@@ -492,7 +497,7 @@ void kgrep_str(matcher *ma, char *buf)
         printf("%s", buf);
         printf(COLOR_RED "%s" COLOR_NONE, ma->pattern);
         pos += strlen(ma->pattern);
-        printf("%s%c", pos, eol_byte);
+        printf("%s", pos);
     }
 }
 
@@ -545,72 +550,38 @@ void doit(matcher *ma)
     printf("\n-----------------------------\n");
 
     // Lookup
-    int fd = open(ma->filename, O_RDONLY);
-    if (fd == -1) {
+    FILE *fp = fopen(ma->filename, "r");
+    if (fp == NULL) {
         printf("Error: open file(%s) fail:%s\n", ma->filename, strerror(errno));
         return;
     }
 
-    lseek(fd, spos.pos, SEEK_SET);  // 偏移
+    fseek(fp, spos.pos, SEEK_SET);  // 偏移
 
-    char *line_buf = NULL;
-    char *line_end = NULL;
     int len = 0;
     int buf_alloc = sizeof(buf);
     unsigned long long total_bytes = (epos.pos - spos.pos);
 
-    while (total_bytes > 0) {
-        if (total_bytes < buf_alloc)
-            buf_alloc = total_bytes;
-
-        ssize_t n = read(fd, pbuf + len, buf_alloc - len);
-        if (n < 0)
-        {
+    while (len < total_bytes) {
+        if (fgets(pbuf, buf_alloc, fp) == NULL) {
             printf("Error: read file(%s) fail:%s\n", ma->filename, strerror(errno));
-            close(fd);
+            fclose(fp);
             return;
         }
-        if (n == 0) {
-            printf("------------ Read EOF ------------ \n");
-            close(fd);
-            return;
-        }
-
-        *(pbuf + len + n) = '\0';
-        total_bytes -= n;
-
-        if (len == 0) {
-            line_buf = pbuf;
-        } else {
-            line_buf = pbuf - len;
-            n = len + n;
-        }
-
-        if (line_buf) {
-            for (;;) {
-                line_end = memchr(line_buf, eol_byte, n);
-                if (line_end)
-                    *line_end = 0;
-                else {
-                    // 保留line_buf，不是完整的一行
-                    memmove(pbuf, line_buf, n);
-                    len = n;
-                    break;
-                }
-
-                kgrep_str(ma, line_buf);
-                n -= (line_end - line_buf + 1);
-                line_buf = line_end + 1;
-            }
+        len += strlen(pbuf);
+        kgrep_str(ma, pbuf);
+        if (ma->debug)
+        {
+            printf("DEBUG: len/total: %lld/%lld\n", len, total_bytes);
         }
     }
 
 KGREP_ERROR:
-    close(fd);
+    fclose(fp);
     return;
 
 KGREP_SUCC:
-    close(fd);
+    fclose(fp);
     return;
 }
 
@@ -662,6 +633,7 @@ void usage(char *prog)
     printf("  -S: 最小size, 单位:MB, 默认:1G\n");
     printf("  -i: 不区分大小写\n");
     printf("  -v: 显示详细信息\n");
+    printf("  -D: 显示debug");
     printf("\n");
     printf("Usage:\n");
     printf("  %s -v -s15 -e17 [pattern] [file]\n", prog);
@@ -690,6 +662,7 @@ int main(int argc, char **argv)
     ma.min_size = 1073741824;   // 1G
     ma.icase = 0;
     ma.verbose = 0;
+    ma.debug = 0;
 
     // struct tm tm;
     // memset(&tm, 0, sizeof(struct tm));
@@ -702,7 +675,7 @@ int main(int argc, char **argv)
 
     // Parase args
     int i, ch;
-    const char *args = "s:e:S:ivVh";
+    const char *args = "s:e:S:ivDVh";
     while ((ch = getopt(argc, argv, args)) != -1) {
         switch (ch)
         {
@@ -720,6 +693,9 @@ int main(int argc, char **argv)
             break;
         case 'v':
             ma.verbose = 1;
+            break;
+        case 'D':
+            ma.debug = 1;
             break;
         case 'V':
             printf("Version: %s\n", VERSION);
