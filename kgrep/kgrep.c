@@ -11,7 +11,7 @@
 #include <time.h>
 #include "kutils.h"
 
-#define VERSION "1.2.2"
+#define VERSION "1.3.2"
 
 #define COLOR_NONE "\033[0m"
 #define COLOR_RED "\033[1;31;40m"
@@ -28,6 +28,7 @@ typedef struct matcher_st
     int icase;
     int verbose;
     int debug;
+    int icolor;
     char pattern[4096];
     char filename[4096];
 } matcher;
@@ -295,7 +296,7 @@ KGREP_SUCC:
     return 0;
 }
 
-int get_end_pos(matcher *ma, found_pos *fpos)
+int get_end_pos(matcher *ma, unsigned long long start_pos, found_pos *fpos)
 {
     char buf[4096];
     char line_time[128];
@@ -310,9 +311,9 @@ int get_end_pos(matcher *ma, found_pos *fpos)
     }
 
     // init pos
-    unsigned long long s_pos = 0;
+    unsigned long long s_pos = start_pos;
     unsigned long long e_pos = st.st_size;
-    unsigned long long c_pos = e_pos / 2;
+    unsigned long long c_pos = ((e_pos - s_pos) / 2) + s_pos;
     unsigned long long line_seconds = 0;
 
     // init fpos
@@ -420,6 +421,10 @@ int get_end_pos(matcher *ma, found_pos *fpos)
                     fpos->seconds, fpos->time_str, line_seconds, line_time, s_pos, c_pos, e_pos, (e_pos - s_pos));
             }
 
+            if ((e_pos - s_pos) <= 1) {
+                is_bigger = 1;
+            }
+
             is_smaller = 1;
             if (is_bigger) {
                 is_bigger = 0;
@@ -492,12 +497,15 @@ void kgrep_str(matcher *ma, char *buf)
     }
 
     if (pos != NULL) {
-        // printf("%s%c", buf, eol_byte);
-        *pos = 0;
-        printf("%s", buf);
-        printf(COLOR_RED "%s" COLOR_NONE, ma->pattern);
-        pos += strlen(ma->pattern);
-        printf("%s", pos);
+        if (ma->icolor == 0) {
+            printf("%s", buf);
+        } else {
+            *pos = 0;
+            printf("%s", buf);
+            printf(COLOR_RED "%s" COLOR_NONE, ma->pattern);
+            pos += strlen(ma->pattern);
+            printf("%s", pos);
+        }
     }
 }
 
@@ -525,7 +533,7 @@ void doit(matcher *ma)
     }
 
     // Get position for End
-    ret = get_end_pos(ma, &epos);
+    ret = get_end_pos(ma, spos.pos, &epos);
     if (ret == -1) {
         printf("Error: get position for end\n");
         return;
@@ -562,9 +570,9 @@ void doit(matcher *ma)
     int buf_alloc = sizeof(buf);
     unsigned long long total_bytes = (epos.pos - spos.pos);
 
-    while (len < total_bytes) {
+    while ((total_bytes - len) > 0) {
         if (fgets(pbuf, buf_alloc, fp) == NULL) {
-            printf("Error: read file(%s) fail:%s\n", ma->filename, strerror(errno));
+            // printf("Error: read file(%s) fail:%s\n", ma->filename, strerror(errno));
             fclose(fp);
             return;
         }
@@ -633,7 +641,8 @@ void usage(char *prog)
     printf("  -S: 最小size, 单位:MB, 默认:1G\n");
     printf("  -i: 不区分大小写\n");
     printf("  -v: 显示详细信息\n");
-    printf("  -D: 显示debug");
+    printf("  -D: 显示debug\n");
+    printf("  -c: 是否有颜色\n");
     printf("\n");
     printf("Usage:\n");
     printf("  %s -v -s15 -e17 [pattern] [file]\n", prog);
@@ -663,6 +672,7 @@ int main(int argc, char **argv)
     ma.icase = 0;
     ma.verbose = 0;
     ma.debug = 0;
+    ma.icolor = 0;
 
     // struct tm tm;
     // memset(&tm, 0, sizeof(struct tm));
@@ -675,7 +685,7 @@ int main(int argc, char **argv)
 
     // Parase args
     int i, ch;
-    const char *args = "s:e:S:ivDVh";
+    const char *args = "s:e:S:icvDVh";
     while ((ch = getopt(argc, argv, args)) != -1) {
         switch (ch)
         {
@@ -687,6 +697,9 @@ int main(int argc, char **argv)
             break;
         case 'S':
             ma.min_size = atoi(optarg) * 1024 * 1024;
+            break;
+        case 'c':
+            ma.icolor = 1;
             break;
         case 'i':
             ma.icase = 1;
@@ -727,6 +740,8 @@ int main(int argc, char **argv)
     printf("File: %s\n", ma.filename);
     printf("Ignore Case: %d\n", ma.icase);
     printf("Interval Size: %llu(%s)\n", ma.min_size, interval_size_str);
+    printf("Display Debug: %d\n", ma.debug);
+    printf("Display Color: %d\n", ma.icolor);
     printf("Start: %d:%d\n", ma.start_hour, ma.start_minute);
     printf("End: %d:%d\n", ma.end_hour, ma.end_minute);
     
