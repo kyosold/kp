@@ -11,7 +11,7 @@
 #include <time.h>
 #include "kutils.h"
 
-#define VERSION "1.4.2"
+#define VERSION "1.5.0"
 
 #define COLOR_NONE "\033[0m"
 #define COLOR_RED "\033[1;31;40m"
@@ -20,6 +20,7 @@ unsigned char eol_byte = '\n';
 
 typedef struct matcher_st
 {
+    int day;
     int start_hour;
     int start_minute;
     int end_hour;
@@ -171,9 +172,10 @@ int get_start_pos(matcher *ma, found_pos *fpos)
         fpos->seconds += (ma->start_minute * 60);
     }
     // 获取日期
-    time_t now = time(NULL);
-    struct tm *local_tm = localtime(&now);
-    int today = local_tm->tm_mday;
+    // time_t now = time(NULL);
+    // struct tm *local_tm = localtime(&now);
+    // int today = local_tm->tm_mday;
+    int today = ma->day;
     fpos->seconds += (today * 86400);
 
     snprintf(fpos->time_str, sizeof(fpos->time_str) - 1, "(%d) %02d:%02d", today, ma->start_hour, ma->start_minute);
@@ -390,9 +392,10 @@ int get_end_pos(matcher *ma, unsigned long long start_pos, found_pos *fpos)
         fpos->seconds += (ma->end_minute * 60);
     }
     // 获取日期
-    time_t now = time(NULL);
-    struct tm *local_tm = localtime(&now);
-    int today = local_tm->tm_mday;
+    // time_t now = time(NULL);
+    // struct tm *local_tm = localtime(&now);
+    // int today = local_tm->tm_mday;
+    int today = ma->day;
     fpos->seconds += (today * 86400);
 
     snprintf(fpos->time_str, sizeof(fpos->time_str), "(%d) %02d:%02d", today, ma->end_hour, ma->end_minute);
@@ -730,6 +733,7 @@ void usage(char *prog)
     printf("  %s [OPTIONS] PATTERN [FILE]\n", prog);
     printf("\n");
     printf("OPTIONS\n");
+    printf("  -d: 几号，默认不写是今天\n");
     printf("  -s: 从指定的开始时间查找，格式:[Hour]:[Minute]，例:(6:12, 6)\n");
     printf("  -e: 查找到指定的结束时间，不写默认到文件结尾\n");
     printf("  -S: 最小size, 单位:MB, 默认:1G\n");
@@ -761,6 +765,7 @@ int main(int argc, char **argv)
     matcher ma;
     ma.start_hour = -1;
     ma.start_minute = -1;
+    ma.day = 0;
     ma.end_hour = -1;
     ma.end_minute = -1;
     ma.min_size = 1073741824; // 1G
@@ -780,7 +785,7 @@ int main(int argc, char **argv)
 
     // Parase args
     int i, ch;
-    const char *args = "s:e:S:icvDVh";
+    const char *args = "s:e:d:S:icvDVh";
     while ((ch = getopt(argc, argv, args)) != -1)
     {
         switch (ch)
@@ -790,6 +795,9 @@ int main(int argc, char **argv)
             break;
         case 'e':
             parse_args("end", optarg, &ma);
+            break;
+        case 'd':
+            ma.day = atoi(optarg);
             break;
         case 'S':
             ma.min_size = atoi(optarg) * 1024 * 1024;
@@ -822,6 +830,12 @@ int main(int argc, char **argv)
         ma.start_minute = 0;
     }
 
+    if (ma.day == 0)
+    {
+        time_t now = time(NULL);
+        ma.day = localtime(&now)->tm_mday;
+    }
+
     if ((argc - optind) != 2)
     {
         usage(argv[0]);
@@ -840,6 +854,7 @@ int main(int argc, char **argv)
     printf("Interval Size: %llu(%s)\n", ma.min_size, interval_size_str);
     printf("Display Debug: %d\n", ma.debug);
     printf("Display Color: %d\n", ma.icolor);
+    printf("Day: %d\n", ma.day);
     printf("Start: %d:%d\n", ma.start_hour, ma.start_minute);
     printf("End: %d:%d\n", ma.end_hour, ma.end_minute);
 
