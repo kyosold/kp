@@ -529,7 +529,7 @@ FINAL_FAIL:
     return -1;
 
 FINAL_SUCC:
-    fclose(0);
+    fclose(fp);
     return 0;
 }
 
