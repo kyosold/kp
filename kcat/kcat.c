@@ -11,7 +11,7 @@
 #include <time.h>
 #include "kutils.h"
 
-#define VERSION "1.0.0"
+#define VERSION "1.0.1"
 
 #define COLOR_NONE "\033[0m"
 #define COLOR_RED "\033[1;31;40m"
@@ -130,7 +130,7 @@ int get_start_pos(matcher *ma, found_pos *fpos)
     struct stat st;
     if (stat(ma->filename, &st) == -1)
     {
-        printf("Error: %s\n", strerror(errno));
+        fprintf(stderr, "Error: %s\n", strerror(errno));
         return -1;
     }
 
@@ -155,7 +155,7 @@ int get_start_pos(matcher *ma, found_pos *fpos)
         fpos->seconds = 0;
         if (ma->verbose > 0)
         {
-            printf("[Start] Match: seconds(0),pos(0)\n");
+            fprintf(stderr, "[Start] Match: seconds(0),pos(0)\n");
         }
         return 0;
     }
@@ -175,13 +175,13 @@ int get_start_pos(matcher *ma, found_pos *fpos)
     snprintf(fpos->time_str, sizeof(fpos->time_str) - 1, "(%d) %02d:%02d", today, ma->start_hour, ma->start_minute);
     if (ma->verbose > 0)
     {
-        printf("[Start] Match: seconds(%llu[%d:%d])\n", fpos->seconds, ma->start_hour, ma->start_minute);
+        fprintf(stderr, "[Start] Match: seconds(%llu[%d:%d])\n", fpos->seconds, ma->start_hour, ma->start_minute);
     }
 
     FILE *fp = fopen(ma->filename, "r");
     if (fp == NULL)
     {
-        printf("Error: %s\n", strerror(errno));
+        fprintf(stderr, "Error: %s\n", strerror(errno));
         return -1;
     }
 
@@ -214,8 +214,8 @@ int get_start_pos(matcher *ma, found_pos *fpos)
             // 往前找，已经超过需要查找的点了
             if (ma->verbose > 0)
             {
-                printf("[Start] Check B: seconds(%llu[%s]) >>> seconds(%llu[%s]), pos(%llu, %llu, %llu) psize(%llu)\n",
-                       fpos->seconds, fpos->time_str, line_seconds, line_time, s_pos, c_pos, e_pos, (e_pos - s_pos));
+                fprintf(stderr, "[Start] Check B: seconds(%llu[%s]) >>> seconds(%llu[%s]), pos(%llu, %llu, %llu) psize(%llu)\n",
+                        fpos->seconds, fpos->time_str, line_seconds, line_time, s_pos, c_pos, e_pos, (e_pos - s_pos));
             }
 
             is_bigger = 1;
@@ -269,8 +269,8 @@ int get_start_pos(matcher *ma, found_pos *fpos)
             // 往后找，还没到需要查找的点
             if (ma->verbose > 0)
             {
-                printf("[Start] Check A: seconds(%llu[%s]) >>> seconds(%llu[%s]), pos(%llu, %llu, %llu) psize(%llu)\n",
-                       fpos->seconds, fpos->time_str, line_seconds, line_time, s_pos, c_pos, e_pos, (e_pos - s_pos));
+                fprintf(stderr, "[Start] Check A: seconds(%llu[%s]) >>> seconds(%llu[%s]), pos(%llu, %llu, %llu) psize(%llu)\n",
+                        fpos->seconds, fpos->time_str, line_seconds, line_time, s_pos, c_pos, e_pos, (e_pos - s_pos));
             }
 
             is_smaller = 1;
@@ -342,7 +342,7 @@ int get_end_pos(matcher *ma, unsigned long long start_pos, found_pos *fpos)
     struct stat st;
     if (stat(ma->filename, &st) == -1)
     {
-        printf("Error: %s\n", strerror(errno));
+        fprintf(stderr, "Error: %s\n", strerror(errno));
         return -1;
     }
 
@@ -366,7 +366,7 @@ int get_end_pos(matcher *ma, unsigned long long start_pos, found_pos *fpos)
         fpos->pos = st.st_size;
         if (ma->verbose > 0)
         {
-            printf("[End] Match: seconds(-1[eof]),pos(%llu)\n", st.st_size);
+            fprintf(stderr, "[End] Match: seconds(-1[eof]),pos(%llu)\n", st.st_size);
         }
         return 0;
     }
@@ -386,13 +386,13 @@ int get_end_pos(matcher *ma, unsigned long long start_pos, found_pos *fpos)
     snprintf(fpos->time_str, sizeof(fpos->time_str), "(%d) %02d:%02d", today, ma->end_hour, ma->end_minute);
     if (ma->verbose > 0)
     {
-        printf("[End] Match: seconds(%llu[%d:%d])\n", fpos->seconds, ma->start_hour, ma->start_minute);
+        fprintf(stderr, "[End] Match: seconds(%llu[%d:%d])\n", fpos->seconds, ma->start_hour, ma->start_minute);
     }
 
     FILE *fp = fopen(ma->filename, "r");
     if (fp == NULL)
     {
-        printf("Error: %s\n", strerror(errno));
+        fprintf(stderr, "Error: %s\n", strerror(errno));
         return -1;
     }
 
@@ -410,8 +410,8 @@ int get_end_pos(matcher *ma, unsigned long long start_pos, found_pos *fpos)
             // 往前找，已经超过需要查找的点了
             if (ma->verbose > 0)
             {
-                printf("[End] Check B: seconds(%llu[%s]) >>> seconds(%llu[%s]), pos(%llu, %llu, %llu) psize(%llu)\n",
-                       fpos->seconds, fpos->time_str, line_seconds, line_time, s_pos, c_pos, e_pos, (e_pos - s_pos));
+                fprintf(stderr, "[End] Check B: seconds(%llu[%s]) >>> seconds(%llu[%s]), pos(%llu, %llu, %llu) psize(%llu)\n",
+                        fpos->seconds, fpos->time_str, line_seconds, line_time, s_pos, c_pos, e_pos, (e_pos - s_pos));
             }
 
             is_bigger = 1;
@@ -465,8 +465,8 @@ int get_end_pos(matcher *ma, unsigned long long start_pos, found_pos *fpos)
             // 往后找，还没到需要查找的点
             if (ma->verbose > 0)
             {
-                printf("[End] Check A: seconds(%llu[%s]) >>> seconds(%llu[%s]), pos(%llu, %llu, %llu) psize(%llu)\n",
-                       fpos->seconds, fpos->time_str, line_seconds, line_time, s_pos, c_pos, e_pos, (e_pos - s_pos));
+                fprintf(stderr, "[End] Check A: seconds(%llu[%s]) >>> seconds(%llu[%s]), pos(%llu, %llu, %llu) psize(%llu)\n",
+                        fpos->seconds, fpos->time_str, line_seconds, line_time, s_pos, c_pos, e_pos, (e_pos - s_pos));
             }
 
             if ((e_pos - s_pos) <= 1)
@@ -545,56 +545,56 @@ void do_it(matcher *ma)
 
     // Get posision for Start
     if (ma->verbose > 0)
-        printf("-----------------------------\n");
+        fprintf(stderr, "-----------------------------\n");
 
     ret = get_start_pos(ma, &spos);
     if (ret == -1)
     {
-        printf("Error: get position for start\n");
+        fprintf(stderr, "Error: get position for start\n");
         return;
     }
     if (ma->verbose > 0)
     {
-        printf("[Start] Final: seconds(%llu[%s]), pos(%llu)\n", spos.seconds, spos.time_str, spos.pos);
+        fprintf(stderr, "[Start] Final: seconds(%llu[%s]), pos(%llu)\n", spos.seconds, spos.time_str, spos.pos);
     }
 
     // Get position for End
     ret = get_end_pos(ma, spos.pos, &epos);
     if (ret == -1)
     {
-        printf("Error: get position for end\n");
+        fprintf(stderr, "Error: get position for end\n");
         return;
     }
     if (ma->verbose > 0)
     {
         if (ma->end_hour == -1 && ma->end_minute == -1)
         {
-            printf("[End] Final: seconds(-1[eof]), pos(%llu)\n", epos.pos);
+            fprintf(stderr, "[End] Final: seconds(-1[eof]), pos(%llu)\n", epos.pos);
         }
         else
         {
-            printf("[End] Final: seconds(%llu[%s]), pos(%llu)\n", epos.seconds, epos.time_str, epos.pos);
+            fprintf(stderr, "[End] Final: seconds(%llu[%s]), pos(%llu)\n", epos.seconds, epos.time_str, epos.pos);
         }
     }
 
     char size_str[128] = {0};
     kconv_mem_size_to_str((epos.pos - spos.pos), size_str, sizeof(size_str), "%.3f");
-    printf("-----------------------------\n");
+    fprintf(stderr, "-----------------------------\n");
     if (ma->end_hour == -1 && ma->end_minute == -1)
     {
-        printf("Lookup: start[%llu][%s] ---> end[%llu][eof], size[%s]", spos.pos, spos.time_str, epos.pos, size_str);
+        fprintf(stderr, "Lookup: start[%llu][%s] ---> end[%llu][eof], size[%s]", spos.pos, spos.time_str, epos.pos, size_str);
     }
     else
     {
-        printf("Lookup: start[%llu][%s] ---> end[%llu][%s], size[%s]", spos.pos, spos.time_str, epos.pos, epos.time_str, size_str);
+        fprintf(stderr, "Lookup: start[%llu][%s] ---> end[%llu][%s], size[%s]", spos.pos, spos.time_str, epos.pos, epos.time_str, size_str);
     }
-    printf("\n-----------------------------\n");
+    fprintf(stderr, "\n-----------------------------\n");
 
     // search
     FILE *fp = fopen(ma->filename, "r");
     if (fp == NULL)
     {
-        printf("Error: open file(%s) fail:%s\n", ma->filename, strerror(errno));
+        fprintf(stderr, "Error: open file(%s) fail:%s\n", ma->filename, strerror(errno));
         return;
     }
 
@@ -619,7 +619,7 @@ void do_it(matcher *ma)
 
         if (ma->debug)
         {
-            printf("DEBUG: len/total: %lld/%lld\n", len, total_bytes);
+            fprintf(stderr, "DEBUG: len/total: %lld/%lld\n", len, total_bytes);
         }
     }
 
@@ -671,34 +671,34 @@ void parse_args(char *type, char *str, matcher *ma)
 
 void usage(char *prog)
 {
-    printf("--------------------------------------------\n");
-    printf("Version: %s\n\n", VERSION);
-    printf("SYNOPSIS\n");
-    printf("  %s [OPTIONS] PATTERN [FILE]\n", prog);
-    printf("\n");
-    printf("OPTIONS\n");
-    printf("  -d: 几号，默认不写是今天\n");
-    printf("  -s: 从指定的开始时间查找，格式:[Hour]:[Minute]，例:(6:12, 6)\n");
-    printf("  -e: 查找到指定的结束时间，不写默认到文件结尾\n");
-    printf("  -S: 最小size, 单位:MB, 默认:1G\n");
-    printf("  -v: 显示详细信息\n");
-    printf("  -D: 显示debug\n");
-    printf("  -c: 是否有颜色\n");
-    printf("\n");
-    printf("Usage:\n");
-    printf("  %s -v -s15 -e17 [file]\n", prog);
-    printf("\n");
-    printf("OTHER\n");
-    printf("  1. 如果文件是gzip，先解压再查询，如:\n");
-    printf("    a. gzip -dvc abc.0.gz > abc.0 \n");
-    printf("    b. kgrep -s8 -e10 'kyosold@qq.com' abc.0\n");
-    printf("  2. 也可以使用kungz解压文件，把解压出来的写到另一个指定的文件中:\n");
-    printf("    a. gcc -g -o kungz kungz.c -lz\n");
-    printf("        (注意: 需要用到zlib库)\n");
-    printf("    b. ./kungz /var/log/abc.log.0.gz abc\n");
-    printf("        说明: 把/var/log/abc.log.0.gz解压的结果写到abc中，原来的abc.log.0.gz保持不变\n");
-    printf("--------------------------------------------\n");
-    printf("\n");
+    fprintf(stderr, "--------------------------------------------\n");
+    fprintf(stderr, "Version: %s\n\n", VERSION);
+    fprintf(stderr, "SYNOPSIS\n");
+    fprintf(stderr, "  %s [OPTIONS] PATTERN [FILE]\n", prog);
+    fprintf(stderr, "\n");
+    fprintf(stderr, "OPTIONS\n");
+    fprintf(stderr, "  -d: 几号，默认不写是今天\n");
+    fprintf(stderr, "  -s: 从指定的开始时间查找，格式:[Hour]:[Minute]，例:(6:12, 6)\n");
+    fprintf(stderr, "  -e: 查找到指定的结束时间，不写默认到文件结尾\n");
+    fprintf(stderr, "  -S: 最小size, 单位:MB, 默认:1G\n");
+    fprintf(stderr, "  -v: 显示详细信息\n");
+    fprintf(stderr, "  -D: 显示debug\n");
+    fprintf(stderr, "  -c: 是否有颜色\n");
+    fprintf(stderr, "\n");
+    fprintf(stderr, "Usage:\n");
+    fprintf(stderr, "  %s -v -s15 -e17 [file]\n", prog);
+    fprintf(stderr, "\n");
+    fprintf(stderr, "OTHER\n");
+    fprintf(stderr, "  1. 如果文件是gzip，先解压再查询，如:\n");
+    fprintf(stderr, "    a. gzip -dvc abc.0.gz > abc.0 \n");
+    fprintf(stderr, "    b. kgrep -s8 -e10 'kyosold@qq.com' abc.0\n");
+    fprintf(stderr, "  2. 也可以使用kungz解压文件，把解压出来的写到另一个指定的文件中:\n");
+    fprintf(stderr, "    a. gcc -g -o kungz kungz.c -lz\n");
+    fprintf(stderr, "        (注意: 需要用到zlib库)\n");
+    fprintf(stderr, "    b. ./kungz /var/log/abc.log.0.gz abc\n");
+    fprintf(stderr, "        说明: 把/var/log/abc.log.0.gz解压的结果写到abc中，原来的abc.log.0.gz保持不变\n");
+    fprintf(stderr, "--------------------------------------------\n");
+    fprintf(stderr, "\n");
 }
 
 int main(int argc, char **argv)
@@ -746,7 +746,7 @@ int main(int argc, char **argv)
             ma.debug = 1;
             break;
         case 'V':
-            printf("Version: %s\n", VERSION);
+            fprintf(stderr, "Version: %s\n", VERSION);
             exit(0);
         case 'h':
         default:
@@ -777,21 +777,21 @@ int main(int argc, char **argv)
 
     char interval_size_str[128] = {0};
     kconv_mem_size_to_str(ma.min_size, interval_size_str, sizeof(interval_size_str), "%.2f");
-    printf("******************************************\n");
-    printf("Verbose: %d\n", ma.verbose);
-    printf("File: %s\n", ma.filename);
-    printf("Interval Size: %llu(%s)\n", ma.min_size, interval_size_str);
-    printf("Display Debug: %d\n", ma.debug);
-    printf("Day: %d\n", ma.day);
-    printf("Start: %d:%d\n", ma.start_hour, ma.start_minute);
-    printf("End: %d:%d\n", ma.end_hour, ma.end_minute);
-    printf("******************************************\n");
+    fprintf(stderr, "******************************************\n");
+    fprintf(stderr, "Verbose: %d\n", ma.verbose);
+    fprintf(stderr, "File: %s\n", ma.filename);
+    fprintf(stderr, "Interval Size: %llu(%s)\n", ma.min_size, interval_size_str);
+    fprintf(stderr, "Display Debug: %d\n", ma.debug);
+    fprintf(stderr, "Day: %d\n", ma.day);
+    fprintf(stderr, "Start: %d:%d\n", ma.start_hour, ma.start_minute);
+    fprintf(stderr, "End: %d:%d\n", ma.end_hour, ma.end_minute);
+    fprintf(stderr, "******************************************\n");
 
     char *ext = strrchr(ma.filename, '.');
     if (ext && (strcasecmp(ext, ".gz") == 0 || strcasecmp(ext, ".gzip") == 0))
     {
-        printf("Error: file(%s) is zip file\n", ma.filename);
-        printf("  Run: 'gzip -dvc %s > tmp.log'\n", ma.filename);
+        fprintf(stderr, "Error: file(%s) is zip file\n", ma.filename);
+        fprintf(stderr, "  Run: 'gzip -dvc %s > tmp.log'\n", ma.filename);
         exit(1);
     }
     do_it(&ma);
